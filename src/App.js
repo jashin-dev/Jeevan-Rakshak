@@ -7,6 +7,8 @@ import Footer from './Footer';
 import HeroSection from './HeroSection';
 import HighLight from './HighLight';
 import Navbar from './Navbar';
+import Login from './Pages/Login';
+import Registration from './Pages/Registration';
 
 function App() {
   return (
