@@ -1,7 +1,7 @@
 function HighLight(){
     return (
         <div
-          className="bg-btnBlue w-full py-8 text-white flex lg:text-[25px] font-semibold lg:px-[60px] items-end px-[20px]"
+          className="bg-[#fedcdc] w-full py-8 text-[#3f3b3b] flex lg:text-[25px] font-semibold lg:px-[60px] items-end px-[20px]"
         >
           <div
             className="items-center flex flex-col border-r-2 flex-grow h-[77px] px-1"

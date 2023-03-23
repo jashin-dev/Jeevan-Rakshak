@@ -8,25 +8,23 @@ function HeroSection() {
                     <h1
                         className="text-4xl max-lg:text-2xl font-bold tracking-wide leading-[50px]"
                     >
-                        Unleash Your Inner Organizer with Flawless Copies
+                        Donate <span class="text-red-600">Blood</span> Save <span class="text-red-600">Lives!</span>
                     </h1>
                     <p className="text-textGrey my-4 max-lg:text-sm text-xl">
-                        Don't let cluttered documents bring you down. Our photocopying
-                        center is here to turn those messy stacks into neat and tidy
-                        copies.
+                    Donating blood is an act of kindness that can save lives. Every day, thousands of people need blood transfusions to stay alive. By donating blood, you can make a significant difference in someone's life, helping to ensure that they receive the blood they need to survive.
                     </p>
                     <div
                         className="text-white text-[20px] max-lg:text-[14px] font-semibold mt-10 gap-5 flex flex-wrap"
                     >
                         <button
-                            className="px-5 py-2 w-[200px] rounded-md bg-btnBlue hover:scale-105 transition-all duration-200 max-lg:w-fit"
+                            className="px-5 py-2 w-[200px] rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200 max-lg:w-fit"
                         >
                             Our Goal
                         </button>
                         <button
-                            className="px-5 py-2 w-[200px] rounded-md bg-btnBlue hover:scale-105 transition-all duration-200 max-lg:w-fit"
+                            className="px-5 py-2 w-[200px] rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200 max-lg:w-fit"
                         >
-                            Material
+                            Donate Now!!
                         </button>
                     </div>
                 </div>
