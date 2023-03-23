@@ -4,7 +4,7 @@ function HighLight(){
           className="bg-[#fedcdc] w-full py-8 text-[#3f3b3b] flex lg:text-[25px] font-semibold lg:px-[60px] items-end px-[20px]"
         >
           <div
-            className="items-center flex flex-col border-r-2 flex-grow h-[77px] px-1"
+            className="items-center flex flex-col border-r-2 border-[#3f3b3b] flex-grow h-[77px] px-1"
           >
             <div className="flex-grow"></div>
             <img
@@ -15,7 +15,7 @@ function HighLight(){
             <div className="text-center">Color Print</div>
           </div>
           <div
-            className="flex flex-col items-center border-r-2 flex-grow h-[77px] justify-center px-1"
+            className="flex flex-col items-center border-r-2 border-[#3f3b3b] flex-grow h-[77px] justify-center px-1"
           >
             <div className="flex-grow"></div>
             <div className="text-[#7C7C7C] text-md text-center">5000+</div>
@@ -23,7 +23,7 @@ function HighLight(){
           </div>
 
           <div
-            className="flex flex-col items-center border-r-2 flex-grow h-[77px] px-1"
+            className="flex flex-col items-center border-r-2 border-[#3f3b3b] flex-grow h-[77px] px-1"
           >
             <div className="flex-grow"></div>
             <div className="text-[#7C7C7C] text-md text-center">3000+</div>

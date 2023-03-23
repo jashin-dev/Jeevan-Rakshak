@@ -12,23 +12,12 @@ function AboutUs(){
           <div class="max-w-[450px]">
             <div class="text-4xl max-lg:text-xl font-bold pb-4">About Us</div>
             <div class="text-lg font-semibold pb-5">
-              Welcome to our photocopy website! We are a professional printing
-              and copying service provider dedicated to meeting all of your
-              printing needs.
+            Welcome to our blood donation website! Here you will find all the information you need to know about blood donation, its benefits, and you can contribute to saving lives.
             </div>
             <div class="">
-              We offer a wide range of services including black and white or
-              color copying, document scanning, binding, laminating, and more.
-              Whether you need a single document or a large batch of copies, we
-              can provide you with fast and reliable service at an affordable
-              price. Our website is designed to make the printing process as
-              easy and convenient as possible. You can upload your documents
-              directly to our website and select your desired print options. We
-              also offer delivery and pick-up options to make sure your printing
-              needs are met on your schedule. At our photocopy website, we are
-              committed to providing excellent customer service and producing
-              top-quality prints. We look forward to serving you and helping you
-              with all of your printing needs.
+            Every year, millions of people around the world require blood transfusions due to various reasons such as surgeries, cancer treatments, accidents, and other medical conditions. Unfortunately, there is a shortage of blood supply in many countries, and this is where you can help!
+
+By donating blood, you can save up to three lives. Blood donation is a safe and simple process that takes about 45 minutes, including the screening process. Your donation can make a significant impact on someone's life, and the experience can be rewarding for you as well.
             </div>
           </div>
         </div>
