@@ -37,12 +37,12 @@ function ContactUs(){
                     placeholder="Let tell us more about your problem"
                   ></textarea>
                 </div>
-                <div id="contactus">
+                <div id="contactus ">
                   <button
-                    className=" text-white max-lg:w-[40vw] px-5 py-2 rounded-md bg-btnBlue hover:scale-105 transition-all duration-200 text-center shadow-lg"
+                    className=" text-white max-lg:w-[40vw] pl-4 pr-7 py-2 rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200 text-center shadow-lg relative"
                   >
                     Contact Us 
-                    <i className="material-icons text-white text-[18px]">send</i>
+                    <i className="material-icons text-white text-[18px] absolute right-2 top-3">send</i>
                   </button>
                 </div>
                </div>

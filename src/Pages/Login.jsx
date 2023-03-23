@@ -4,7 +4,7 @@ export default function Login() {
     return (
         <div>
             <div className="flex items-center h-screen w-full justify-center">
-                <div className="w-[40%] w-min-[400px] bg-white rounded-xl shadow-xl p-8 m-4 md:max-w-sm md:mx-auto border">
+                <div className="w-[40%] min-w-[360px] bg-white rounded-xl shadow-xl px-10 py-20 m-4 md:max-w-sm md:mx-auto border">
                     <span className="block w-full text-xl uppercase font-bold mb-10">Login</span>
                     <form className="mb-4" action="/" method="post">
                         <div className="mb-4 md:w-full">
