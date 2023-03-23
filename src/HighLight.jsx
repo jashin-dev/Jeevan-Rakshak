@@ -18,10 +18,8 @@ function HighLight(){
             className="flex flex-col items-center border-r-2 flex-grow h-[77px] justify-center px-1"
           >
             <div className="flex-grow"></div>
-            <div className="text-[#7C7C7C] text-[16px] hidden lg:block">
-              A0, A1, A2, A3, A4, A5, A6
-            </div>
-            <div className="text-center">All Sizes</div>
+            <div className="text-[#7C7C7C] text-md text-center">5000+</div>
+            <div className="text-center">Donation</div>
           </div>
 
           <div
@@ -31,7 +29,7 @@ function HighLight(){
             <div className="text-[#7C7C7C] text-md text-center">3000+</div>
             <div className="text-center">
               <div className="max-lg:hidden"></div>
-              Customers
+              Community
             </div>
           </div>
           <div className="flex flex-col items-center flex-grow h-[77px] px-1">

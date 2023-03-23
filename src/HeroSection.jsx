@@ -21,7 +21,7 @@ function HeroSection() {
                         <button
                             className="px-5 py-2 w-[200px] rounded-md bg-btnBlue hover:scale-105 transition-all duration-200 max-lg:w-fit"
                         >
-                            Our Services
+                            Our Goal
                         </button>
                         <button
                             className="px-5 py-2 w-[200px] rounded-md bg-btnBlue hover:scale-105 transition-all duration-200 max-lg:w-fit"
@@ -32,7 +32,7 @@ function HeroSection() {
                 </div>
                 <div className="right">
                     <img
-                        className="w-[400px] inline-block"
+                        className="w-[300px] inline-block"
                         src="./images/herosection.png"
                         alt=""
                         srcset=""

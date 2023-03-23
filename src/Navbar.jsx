@@ -18,7 +18,7 @@ function Navbar() {
                 className="flex justify-center sticky lg:gap-10 gap-3 text-[18px] py-2 text-[#7C7C7C] font-semibold lg:flex-row flex-col"
             >
                 <div className="hover:text-lightBlue transition-all duration-200">
-                    <a href="#"> Prices</a>
+                    <a href="#">Donate Now</a>
                 </div>
                 <div className="hover:text-lightBlue transition-all duration-200">
                     <a href="#aboutus">About Us</a>
@@ -36,7 +36,7 @@ function Navbar() {
                     Login
                 </button>
                 <button
-                    className="max-lg:w-[40vw] px-5 py-2 rounded-md bg-[#020548] hover:scale-105 transition-all duration-200"
+                    className="max-lg:w-[40vw] px-5 py-2 rounded-md bg-btnBlue hover:scale-105 transition-all duration-200"
                 >
                     Sign Up
                 </button>
