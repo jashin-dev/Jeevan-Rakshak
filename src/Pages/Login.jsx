@@ -3,8 +3,8 @@ import React from 'react'
 export default function Login() {
     return (
         <div>
-            <div className="flex items-center h-screen w-full">
-                <div className="w-full bg-white rounded shadow-lg p-8 m-4 md:max-w-sm md:mx-auto">
+            <div className="flex items-center h-screen w-full justify-center">
+                <div className="w-[40%] w-min-[400px] bg-white rounded shadow-xl p-8 m-4 md:max-w-sm md:mx-auto border">
                     <span className="block w-full text-xl uppercase font-bold mb-4">Login</span>
                     <form className="mb-4" action="/" method="post">
                         <div className="mb-4 md:w-full">

@@ -22,6 +22,8 @@ function App() {
         <CustomerReview/>
         <ContactUs/>
         <Footer/>
+        <Login/>
+        <Registration/>
       </div>
     </div>
   );
