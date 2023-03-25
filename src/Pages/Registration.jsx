@@ -1,8 +1,8 @@
-import React , {useState } from 'react'
+import React, { useState } from 'react'
 
 export default function Registration() {
 
-    const [formData, setFormData] = useState({ firstName :"" , lastName : "" , email: "", password: "" });
+    const [formData, setFormData] = useState({ firstName: "", lastName: "", email: "", password: "" });
     const changeHandler = (e) => {
 
         setFormData((prevState) => {
@@ -28,22 +28,22 @@ export default function Registration() {
                         <form className="py-4 px-8" onSubmit={submitHandler}>
                             <div className="flex mb-4">
                                 <div className="w-1/2 mr-1">
-                                    <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="first_name">First Name</label>
-                                    <input className="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="first_name" type="text" placeholder="Your first name" value={formData.firstName} onChange = {changeHandler}/>
+                                    <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="firstName">First Name</label>
+                                    <input className="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="firstName" type="text" placeholder="Your first name" value={formData.firstName} onChange={changeHandler} name = "firstName"/>
                                 </div>
                                 <div className="w-1/2 ml-1">
-                                    <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="last_name">Last Name</label>
-                                    <input className="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="last_name" type="text" placeholder="Your last name" value={formData.lastName} onChange = {changeHandler}/>
+                                    <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="lastName">Last Name</label>
+                                    <input className="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="lastName" type="text" placeholder="Your last name" value={formData.lastName} onChange={changeHandler}  name = "lastName"/>
                                 </div>
                             </div>
                             <div className="mb-4">
                                 <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="email">Email Address</label>
-                                <input className="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email" type="email" placeholder="Your email address" value={formData.email} onChange = {changeHandler}/>
+                                <input className="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email" type="email" placeholder="Your email address" value={formData.email} onChange={changeHandler} name = "email" />
                             </div>
                             <div className="mb-4">
                                 <label className="block text-grey-darker text-sm font-bold mb-2" htmlFor="password">Password</label>
-                                <input className="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="password" type="password" placeholder="Your secure password" value={formData.password} onChange = {changeHandler}/>
-                                    <p className="text-grey text-xs mt-1">At least 6 characters</p>
+                                <input className="appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="password" type="password" placeholder="Your secure password" value={formData.password} onChange={changeHandler} name = "password"/>
+                                <p className="text-grey text-xs mt-1">At least 6 characters</p>
                             </div>
                             <div className="flex items-center justify-between mt-8">
                                 <button className="bg-blue hover:bg-blue-dark text-red-400 font-bold py-2 px-4 rounded-full" type="submit">
@@ -58,7 +58,7 @@ export default function Registration() {
                 </div>
             </div>
 
-          
+
         </div >
     )
 }
