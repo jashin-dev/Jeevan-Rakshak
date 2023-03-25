@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import AboutUs from './About';
 import './App.css';
 import ContactUs from './ContactUs';
+import Navbar from './Navbar';
 import Donate from './Pages/Donate';
 
 import Home from './Pages/Home';
@@ -19,7 +20,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
           <Route path='/registration' element={<Registration />} />
-          <Route path='/contactus' element={<ContactUs/>} />
+          <Route path='/contactus' element={<ContactUs />} />
           <Route path='/requestBlood' element={<RequestForm />} />
           <Route path='/donateBlood' element = {<Donate/>} />
         </Routes>

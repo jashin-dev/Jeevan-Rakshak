@@ -1,5 +1,10 @@
+import Footer from "./Footer";
+import Navbar from "./Navbar";
+
 function ContactUs(){
     return (
+      <div>
+      <Navbar/>
         <div className="w-full p-10 py-20 flex justify-center  items-center gap-10 max-lg:flex-col-reverse">
           <div
             className=" flex flex-col justify-between items-start "
@@ -52,6 +57,8 @@ function ContactUs(){
           <div className="w-[360px]">
             <img src="./images/contactus.png" className="w-full inline-block" alt=""/>
            </div>
+        </div>
+        <Footer/>
         </div>
     )
 }

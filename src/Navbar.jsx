@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Home from "./Pages/Home";
 
 function Navbar() {
      
@@ -12,13 +13,16 @@ function Navbar() {
     const contactRouteHandler = ()=>{
         navigate('/contactus')
     }
+    const homeRouteHandler = ()=>{
+        navigate('/')
+    }
     return (
         <nav
             className="w-full flex justify-between items-center p-[10px] px-[60px] lg:flex-row flex-col sticky lg:-top-[50px] rounded-lg border-b-2 bg-white opacity-90 backdrop-blur-sm z-10 -top-[180px]"
             id="nav"
         >
             <div
-                className="flex hover:scale-105 transition-all duration-200 relative items-end w-[205px]"
+                className="flex hover:scale-105 transition-all duration-200 relative items-end w-[205px]" onClick={homeRouteHandler}
             >
                 <img src="images/LOGO.png" alt="" className="w-[60px]" />
                 <div
