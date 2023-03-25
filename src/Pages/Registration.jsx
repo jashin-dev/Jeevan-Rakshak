@@ -92,10 +92,10 @@ export default function Registration() {
               <input
                 className="w-full border rounded p-2 outline-none focus:border-[#2593D2]"
                 type="password"
-                name="password"
+                name="confirm_password"
                 id="confirm_password"
                 placeholder="Confirm Password"
-                value={formData.password}
+                value={formData.confirm_password}
                 onChange={changeHandler}
               />
             </div>

@@ -119,7 +119,7 @@ export default function RequestForm() {
                   type="text"
                   placeholder="City"
                   name="Location"
-                  value={formData.lastName}
+                  value={formData.city}
                   onChange={changeHandler}
                 />
               </div>
