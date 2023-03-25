@@ -16,13 +16,16 @@ function Navbar() {
     const homeRouteHandler = ()=>{
         navigate('/')
     }
+    const FAQRouteHandler = ()=>{
+        navigate('/FAQ')
+    }
     return (
         <nav
             className="w-full flex justify-between items-center p-[10px] px-[60px] lg:flex-row flex-col sticky lg:-top-[50px] rounded-lg border-b-2 bg-white opacity-90 backdrop-blur-sm z-10 -top-[180px]"
             id="nav"
         >
             <div
-                className="flex hover:scale-105 transition-all duration-200 relative items-end w-[205px]" onClick={homeRouteHandler}
+                className="flex hover:scale-105 transition-all duration-200 relative items-end w-[205px] hover:cursor-pointer" onClick={homeRouteHandler}
             >
                 <img src="images/LOGO.png" alt="" className="w-[60px]" />
                 <div
@@ -34,13 +37,13 @@ function Navbar() {
             <div
                 className="flex justify-center sticky lg:gap-10 gap-3 text-[18px] py-2 text-[#7C7C7C] font-semibold lg:flex-row flex-col"
             >
-                <div className="hover:text-lightBlue transition-all duration-200">
-                    <a href="#">FAQ</a>
+                <div className="hover:text-lightBlue transition-all duration-200 hover:cursor-pointer">
+                    <div onclick={FAQRouteHandler}>FAQ</div>
                 </div>
                 <div className="hover:text-lightBlue transition-all duration-200">
                     <a href="#aboutus">About Us</a>
                 </div>
-                <div className="hover:text-lightBlue transition-all duration-200">
+                <div className="hover:text-lightBlue transition-all duration-200 hover:cursor-pointer">
                     <div  onClick={contactRouteHandler}>Contact Us</div>
                 </div>
             </div>
