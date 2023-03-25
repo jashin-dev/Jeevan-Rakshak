@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import { ChatEngine, getOrCreateChat } from 'react-chat-engine'
+import Navbar from './Navbar'
 
 const Chat = () => {
 	const [username, setUsername] = useState('')
@@ -16,10 +17,10 @@ const Chat = () => {
 	function renderChatForm(creds) {
 		return (
 			<div>
-				<input 
-					placeholder='Username' 
-					value={username} 
-					onChange={(e) => setUsername(e.target.value)} 
+				<input
+					placeholder='Username'
+					value={username}
+					onChange={(e) => setUsername(e.target.value)}
 				/>
 				<button onClick={() => createDirectChat(creds)}>
 					Create
@@ -29,13 +30,16 @@ const Chat = () => {
 	}
 
 	return (
-		<ChatEngine
-			height='100vh'
-			userName='user1'
-			userSecret='123456'
-			projectID='af97511c-26a9-479d-9d20-07cbcb792618'
-			renderNewChatForm={(creds) => renderChatForm(creds)}
-		/>
+		<div>
+			<Navbar />
+			<ChatEngine
+				height='100vh'
+				userName='user1'
+				userSecret='123456'
+				projectID='af97511c-26a9-479d-9d20-07cbcb792618'
+				renderNewChatForm={(creds) => renderChatForm(creds)}
+			/>
+		</div>
 	)
 }
 
