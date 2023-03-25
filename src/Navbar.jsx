@@ -38,7 +38,7 @@ function Navbar() {
                 className="flex justify-center sticky lg:gap-10 gap-3 text-[18px] py-2 text-[#7C7C7C] font-semibold lg:flex-row flex-col"
             >
                 <div className="hover:text-lightBlue transition-all duration-200 hover:cursor-pointer">
-                    <div onclick={FAQRouteHandler}>FAQ</div>
+                    <div onClick={FAQRouteHandler}>FAQ</div>
                 </div>
                 <div className="hover:text-lightBlue transition-all duration-200">
                     <a href="#aboutus">About Us</a>
