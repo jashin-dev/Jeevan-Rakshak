@@ -20,10 +20,10 @@ const Chat = () => {
 			<div>
 
 			<div>
-				<input 
-					placeholder='Username' 
-					value={username} 
-					onChange={(e) => setUsername(e.target.value)} 
+				<input
+					placeholder='Username'
+					value={username}
+					onChange={(e) => setUsername(e.target.value)}
 				/>
 				<button onClick={() => createDirectChat(creds)}>
 					Create 	
