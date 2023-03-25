@@ -6,6 +6,9 @@ function HeroSection() {
     const requestRouteHandler = ()=>{
         navigate('/requestBlood');
     }
+    const donateRoutehandler = ()=>{
+        navigate('/donateBlood') ; 
+    }
     return (
         <section className="my-10">
             <div
@@ -31,6 +34,7 @@ function HeroSection() {
                         </button>
                         <button
                             className="px-5 py-2 w-[200px] rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200 max-lg:w-fit"
+                            onClick={donateRoutehandler}
                         >
                             Donate Now!!
                         </button>
