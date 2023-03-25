@@ -1,4 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 function HeroSection() {
+    
+    const navigate = useNavigate() ; 
+    const requestRouteHandler = ()=>{
+        navigate('/requestBlood');
+    }
     return (
         <section className="my-10">
             <div
@@ -17,9 +24,10 @@ function HeroSection() {
                         className="text-white text-[20px] max-lg:text-[14px] font-semibold mt-10 gap-5 flex flex-wrap"
                     >
                         <button
+                            onClick={requestRouteHandler}
                             className="px-5 py-2 w-[200px] rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200 max-lg:w-fit"
                         >
-                            Our Goal
+                            Request Blood
                         </button>
                         <button
                             className="px-5 py-2 w-[200px] rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200 max-lg:w-fit"
