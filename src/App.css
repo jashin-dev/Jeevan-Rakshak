@@ -84,3 +84,9 @@ border-bottom: #282c34;
 .ce-wrapper ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+.ce-chats-container > div > div>input{
+  display: none !important;
+}
+.ce-chats-container > div > div>button{
+  display: none !important;
+}
