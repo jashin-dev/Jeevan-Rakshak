@@ -1,15 +1,14 @@
 
 import { Routes, Route } from 'react-router-dom';
-import AboutUs from './About';
 import './App.css';
 import ContactUs from './ContactUs';
-import Navbar from './Navbar';
 import Donate from './Pages/Donate';
 import FAQ from './FAQ';
 import Home from './Pages/Home';
 import Login from './Pages/Login';
 import Registration from './Pages/Registration';
 import RequestForm from './RequestForm';
+import Chat from './Chat';
 
 function App() {
   return (
@@ -24,6 +23,7 @@ function App() {
           <Route path='/FAQ' element={<FAQ />} />
           <Route path='/requestBlood' element={<RequestForm />} />
           <Route path='/donateBlood' element = {<Donate/>} />
+          <Route path='/chat' element = {<Chat/>} />
         </Routes>
         
 
