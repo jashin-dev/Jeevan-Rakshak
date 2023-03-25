@@ -21,8 +21,8 @@ export default function Login() {
         <div>
             <div className="flex items-center max-lg:h-screen lg:h-[88vh] w-full justify-center bg-[url('../public/images/background.png')]  bg bg-no-repeat rounded-xl relative">
             <div class="backdrop-blur-md h-full w-full absolute right-0 left-0 top-0 bottom-0 z-10 rounded-xl opacity-30 bg-white"></div>
-                <div className="w-[40%] min-w-[360px] bg-white rounded-xl shadow-md px-10 pt-20 pb-16 m-4 md:max-w-sm md:mx-auto border z-20">
-                    <span className="block w-full text-xl uppercase font-bold mb-10">Login</span>
+                <div className="w-[40%] min-w-[360px] bg-white rounded-xl shadow-xl px-10 pt-20 pb-16 m-4 md:max-w-sm md:mx-auto border z-20">
+                    <span className="block w-full text-3xl uppercase font-bold mb-10">Login</span>
                     <form className="mb-4" action="/" onSubmit={submitHandler}>
                         <div className="mb-4 md:w-full">
                             <label for="email" className="block text-xs mb-1">Username or Email</label>
@@ -36,7 +36,7 @@ export default function Login() {
                     </form>
                     <a className="text-blue-700 text-center text-sm" href="/login">Forgot password?</a>
                     <p className="text-center mt-8">
-                        <a href="#" className="text-grey-dark text-sm no-underline hover:text-grey-darker">Create an account</a>
+                        <a href="#" className="text-grey-dark text-sm no-underline hover:text-grey-darker font-semibold">Create an account</a>
                     </p>
                 </div>
             </div>
