@@ -41,7 +41,7 @@ function Navbar() {
                     <div onClick={FAQRouteHandler}>FAQ</div>
                 </div>
                 <div className="hover:text-lightBlue transition-all duration-200">
-                    <a href="#aboutus">About Us</a>
+                    <a onClick={homeRouteHandler} href="#aboutus">About Us</a>
                 </div>
                 <div className="hover:text-lightBlue transition-all duration-200 hover:cursor-pointer">
                     <div  onClick={contactRouteHandler}>Contact Us</div>
