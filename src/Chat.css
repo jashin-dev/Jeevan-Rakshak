@@ -1,0 +1,26 @@
+.ce-chat-title-text{
+    color: #f45454 !important;
+    text-transform: capitalize !important;
+}
+.ce-chat-subtitle-text{
+    color: #f45454 !important;
+    text-transform: capitalize !important;
+}
+.ce-my-message-bubble {
+    background: #f45454 !important;
+}
+
+.ce-chats-container input{
+    margin: 10px !important;
+    border: 1px solid #f45454;
+    border-radius: 10px;
+    padding: 10px;
+    color: #f45454;
+}
+.ce-chats-container button{
+    margin: 10px !important;
+    border: 1px solid #f45454;
+    border-radius: 10px;
+    padding: 10px;
+    color: #f45454;
+}
