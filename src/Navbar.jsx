@@ -27,11 +27,11 @@ function Navbar() {
             <div
                 className="flex hover:scale-105 transition-all duration-200 relative items-end w-[205px] hover:cursor-pointer" onClick={homeRouteHandler}
             >
-                <img src="images/LOGO.png" alt="" className="w-[60px]" />
+                <img src="images/j.png" alt="" className="w-[60px]" />
                 <div
-                    className="text-[35px] font-bold text-[#000000] left-[53px] absolute tracking-wider"
+                    className="text-[35px] font-bold text-[#000000] left-[46px] absolute tracking-wider"
                 >
-                    <span className="font-bold text-[#2593D2]">opy</span>Print
+                    <span className="font-bold text-[#f45454]">eevan</span>Rakshak
                 </div>
             </div>
             <div

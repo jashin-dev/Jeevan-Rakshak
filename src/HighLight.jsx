@@ -8,11 +8,11 @@ function HighLight(){
           >
             <div className="flex-grow"></div>
             <img
-              src="images/colorprint.png"
+              src="images/j.png"
               alt=""
               className="w-[40px] max-lg:w-[30px]"
             />
-            <div className="text-center">Color Print</div>
+            <div className="text-center">Jeevan Rakshak</div>
           </div>
           <div
             className="flex flex-col items-center border-r-2 border-[#3f3b3b] flex-grow h-[77px] justify-center px-1"
