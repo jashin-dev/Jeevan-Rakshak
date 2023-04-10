@@ -39,9 +39,9 @@ const Chat = () => {
 			<Navbar />
 			<ChatEngine
 				height='100vh'
-				userName='user1'
+				userName='user2'
 				userSecret='123456'
-				projectID='af97511c-26a9-479d-9d20-07cbcb792618'
+				projectID='5bae76a3-971d-4ea2-bc92-a1155af1de85'
 				renderNewChatForm={(creds) => renderChatForm(creds)}
 			/>
 			<Footer />
