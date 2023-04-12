@@ -43,7 +43,7 @@ function HeroSection() {
                 <div className="right">
                     <img
                         className="w-[400px] inline-block"
-                        src="./images/herosection.png"
+                        src="./images/bg3.png"
                         alt=""
                         srcset=""
                     />
