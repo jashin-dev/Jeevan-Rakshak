@@ -28,13 +28,13 @@ export default function RequestForm() {
   return (
     <div class="">
     <Navbar/>
-      <div className="flex items-center max-lg:h-screen lg:h-[88vh] w-full justify-center bg-[url('../public/images/background.png')]  bg bg-no-repeat rounded-xl relative">
+      <div className="flex items-center max-lg:h-screen lg:h-fit w-full justify-center bg-[url('../public/images/background.png')]  bg bg-no-repeat rounded-xl relative">
         <div class="backdrop-blur-md h-full w-full absolute right-0 left-0 top-0 bottom-0 z-10 rounded-xl opacity-30 bg-white"></div>
-        <div className="w-[40%] min-w-[360px] bg-white rounded-xl shadow-xl px-10 py-12 m-4 md:max-w-sm md:mx-auto border z-20">
-          <span className="block w-full text-2xl uppercase font-bold mb-8">
+        <div className="w-[40%] min-w-[360px] bg-white rounded-xl shadow-xl px-10 py-8 m-4 md:max-w-sm md:mx-auto border z-20 mb-10">
+          <span className="block w-full text-2xl uppercase font-bold mb-6">
             Help Save A Life
           </span>
-          <form onSubmit={submitHandler} className="flex gap-3 flex-col">
+          <form onSubmit={submitHandler} className="flex gap-2 flex-col">
             <div class="flex gap-3">
               <div>
                 <label for="firstname" className="block text-xs mb-1 w-1/2">
@@ -91,6 +91,8 @@ export default function RequestForm() {
                 <option value={"A-"}>A-</option>
                 <option value={"B+"}>B+</option>
                 <option value={"B-"}>B-</option>
+                <option value={"AB-"}>AB-</option>
+                <option value={"AB-"}>AB-</option>
                 <option value={"O+"}>O+</option>
                 <option value={"O-"}>O-</option>
               </select>
@@ -123,9 +125,23 @@ export default function RequestForm() {
                   onChange={changeHandler}
                 />
               </div>
+              <div>
+                <label for="message" className="block text-xs mb-1">
+                  Details
+                </label>
+                <input
+                  className="w-full border rounded p-2 outline-none focus:border-[#2593D2] align-text-top"
+                  type="text"
+                  height="100px"
+                  placeholder="Details"
+                  name="Details"
+                  value={formData.details}
+                  onChange={changeHandler}
+                />
+              </div>
               <button
                     
-                    className="max-lg:w-[40vw] px-5 py-2 rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200"
+                    className="max-lg:w-[40vw] px-5 py-2 rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200 text-white"
                 >   
                    Request
                 </button>

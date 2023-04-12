@@ -36,7 +36,7 @@ export default function Login() {
                     </form>
                     <a className="text-blue-700 text-center text-sm" href="/login">Forgot password?</a>
                     <p className="text-center mt-8">
-                        <a href="#" className="text-grey-dark text-sm no-underline hover:text-grey-darker font-semibold">Create an account</a>
+                        <a href="./registration" className="text-grey-dark text-sm no-underline hover:text-grey-darker font-semibold">Create an account</a>
                     </p>
                 </div>
             </div>

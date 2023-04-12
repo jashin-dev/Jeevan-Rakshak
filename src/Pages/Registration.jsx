@@ -39,7 +39,7 @@ export default function Registration() {
                   type="text"
                   id="firstname"
                   placeholder="First Name"
-                  value={formData.email}
+                  value={formData.firstname}
                   onChange={changeHandler}
                 />
               </div>
@@ -52,7 +52,7 @@ export default function Registration() {
                   type="text"
                   id="lastname"
                   placeholder="Last Name"
-                  value={formData.email}
+                  value={formData.lastname}
                   onChange={changeHandler}
                 />
               </div>
@@ -99,13 +99,49 @@ export default function Registration() {
                 onChange={changeHandler}
               />
             </div>
+            <div class="flex gap-3">
+            <div className="mb-2 w-[50%]">
+            <label for="bloodGrp" className="block text-xs mb-1 w-[50%]">
+                  Blood 
+                </label>
+              <select
+                name="bloodGrp"
+                id="bloodGrp"
+                value={formData.bloodGrp}
+                onChange={changeHandler}
+                class="w-full border rounded p-2 outline-none focus:border-[#2593D2] "
+              >
+                <option value={"A+"}>A+</option>
+                <option value={"A-"}>A-</option>
+                <option value={"B+"}>B+</option>
+                <option value={"B-"}>B-</option>
+                <option value={"AB-"}>AB-</option>
+                <option value={"AB-"}>AB-</option>
+                <option value={"O+"}>O+</option>
+                <option value={"O-"}>O-</option>
+              </select>
+              </div>
+              <div className="mb-2 ">
+                <label for="location" className="block text-xs mb-1 w-1/2">
+                  Location
+                </label>
+                <input
+                  className="w-full border rounded p-2 outline-none focus:border-[#2593D2]"
+                  type="text"
+                  id="lastname"
+                  placeholder="Pincode"
+                  value={formData.location}
+                  onChange={changeHandler}
+                />
+              </div>
+              </div>
             <button className="bg-[#f45454] hover:bg-[#dc4545] text-white uppercase text-sm font-semibold px-4 py-2 rounded">
               Sign Up{" "}
             </button>
           </form>
           <p className="text-center mt-2">
             <a
-              href="#"
+              href="./login"
               className="text-grey-dark text-sm no-underline hover:text-grey-darker font-semibold"
             >
               Already have an account
