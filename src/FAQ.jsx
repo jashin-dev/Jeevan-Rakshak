@@ -18,7 +18,6 @@ function FAQ() {
         </div>:<div></div>}
         <div class="font-bold text-xl mb">Q: How often can I donate blood?</div>
         <div class="text-xl text-[#575656] mb-4">A: You can donate blood every 56 days (8 weeks).</div>
-
         <div class="font-bold text-xl mb">Q: Is it safe to donate blood?</div>
         <div class="text-xl text-[#575656] mb-4">
           A: Yes, it is safe to donate blood. The equipment used is sterile, and
