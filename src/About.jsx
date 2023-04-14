@@ -5,7 +5,7 @@ function AboutUs(){
           id="aboutus"
         >
           <img
-            src="images/u1.avif"
+            src="images/bg2.jpg"
             alt=""
             class="rounded-3xl w-[25vw] h-[40vw] shadow-lg"
           />

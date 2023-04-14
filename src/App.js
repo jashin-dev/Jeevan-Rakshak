@@ -9,6 +9,7 @@ import Login from './Pages/Login';
 import Registration from './Pages/Registration';
 import RequestForm from './RequestForm';
 import Chat from './Chat';
+import Calendar from './Components/AddCalender';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path='/requestBlood' element={<RequestForm />} />
           <Route path='/donateBlood' element = {<Donate/>} />
           <Route path='/chat' element = {<Chat/>} />
+          <Route path='/calendar' element = {<Calendar/>} />
         </Routes>
         
 
