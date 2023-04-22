@@ -20,10 +20,10 @@ export default function DonateCard({image , name , age , location , bloodGrp}) {
             <img src="../../images/herosection.png" alt="" className='h-[60px]  inline-block object-cover'/>
         </div>
      
-            <div>Name : {name} </div>
-            <div>Age : {age} </div>
+            <div>Name : Aman Gupta  </div>
+            <div>Age : 22 </div>
             <div>Location : <span onClick={handleLocationClick}>{location}</span></div>
-            <div>Blood Group : {bloodGrp}</div>
+            <div>Blood Group : B+</div>
 
 
             <div className='flex flex-row gap-5 '>
