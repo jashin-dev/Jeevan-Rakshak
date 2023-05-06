@@ -5,7 +5,6 @@ import Footer from '../Footer'
 import HeroSection from '../HeroSection'
 import HighLight from '../HighLight'
 import Navbar from '../Navbar'
-
 export default function Home() {
   return (
     <div>
