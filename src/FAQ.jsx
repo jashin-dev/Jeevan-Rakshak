@@ -5,8 +5,7 @@ import questions from "./faq_data"
 import Question from "./Components/Question";
 
 function FAQ() {
-  const[collapse,setCollapse]=useState(true);
-  const handleCollapse = ()=>{setCollapse(collapse=>!collapse)} 
+  
   return (
     <div>
       <Navbar />
