@@ -18,7 +18,7 @@ function HeroSection() {
                     <h1
                         className="text-4xl max-lg:text-2xl font-bold tracking-wide leading-[50px]"
                     >
-                        Donate <span class="text-red-600">Blood</span> Save <span class="text-red-600">Lives!</span>
+                        Donate <span className="text-red-600">Blood</span> Save <span className="text-red-600">Lives!</span>
                     </h1>
                     <p className="text-textGrey my-4 max-lg:text-sm text-xl">
                     Donating blood is an act of kindness that can save lives. Every day, thousands of people need blood transfusions to stay alive. By donating blood, you can make a significant difference in someone's life, helping to ensure that they receive the blood they need to survive.
@@ -44,8 +44,7 @@ function HeroSection() {
                     <img
                         className="w-[400px] inline-block"
                         src="./images/bg3.png"
-                        alt=""
-                        srcset=""
+                        
                     />
                 </div>
             </div>

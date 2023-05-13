@@ -47,23 +47,21 @@ export default function RequestForm() {
     });
   };
 
-  useEffect(()=>{
-    console.log(user);
-  } , [user])
+
 
   return (
-    <div class="">
+    <div className="">
       <Navbar />
       <div className="flex items-center max-lg:h-screen lg:h-fit w-full justify-center bg-[url('../public/images/background.png')]  bg bg-no-repeat rounded-xl relative">
-        <div class="backdrop-blur-md h-full w-full absolute right-0 left-0 top-0 bottom-0 z-10 rounded-xl opacity-30 bg-white"></div>
+        <div className="backdrop-blur-md h-full w-full absolute right-0 left-0 top-0 bottom-0 z-10 rounded-xl opacity-30 bg-white"></div>
         <div className="w-[40%] min-w-[360px] bg-white rounded-xl shadow-xl px-10 py-8 m-4 md:max-w-sm md:mx-auto border z-20 mb-10">
           <span className="block w-full text-2xl uppercase font-bold mb-6">
             Help Save A Life
           </span>
           <form onSubmit={submitHandler} className="flex gap-2 flex-col">
-            <div class="flex gap-3">
+            <div className="flex gap-3">
               <div>
-                <label for="firstname" className="block text-xs mb-1 w-1/2">
+                <label htmlFor="firstname" className="block text-xs mb-1 w-1/2">
                   First Name
                 </label>
                 <input
@@ -75,7 +73,7 @@ export default function RequestForm() {
                 />
               </div>
               <div>
-                <label for="lastName" className="block text-xs mb-1 w-1/2">
+                <label htmlFor="lastName" className="block text-xs mb-1 w-1/2">
                   Last Name
                 </label>
                 <input
@@ -88,7 +86,7 @@ export default function RequestForm() {
               </div>
             </div>
             <div>
-              <label for="email" className="block text-xs mb-1 w-1/2">
+              <label htmlFor="email" className="block text-xs mb-1 w-1/2">
                 Email
               </label>
               <input
@@ -100,14 +98,14 @@ export default function RequestForm() {
               />
             </div>
             <div>
-              <label for="bloodGrp" className="block text-xs mb-1 w-1/2">
+              <label htmlFor="bloodGrp" className="block text-xs mb-1 w-1/2">
                 Blood Group
               </label>
               <select
                 name="bloodGrp"
                 id="bloodGrp"
                 value={user.bloodGrp}
-                class="w-full border rounded p-2 outline-none focus:border-[#2593D2]"
+                className="w-full border rounded p-2 outline-none focus:border-[#2593D2]"
               >
                 <option value={"A+"}>A+</option>
                 <option value={"A-"}>A-</option>
@@ -121,7 +119,7 @@ export default function RequestForm() {
             </div>
 
             <div>
-              <label for="Location" className="block text-xs mb-1 w-1/2">
+              <label htmlFor="Location" className="block text-xs mb-1 w-1/2">
                 Location
               </label>
               <input
@@ -135,7 +133,7 @@ export default function RequestForm() {
               />
             </div>
             <div>
-              <label for="message" className="block text-xs mb-1">
+              <label htmlFor="message" className="block text-xs mb-1">
                 Details
               </label>
               <input

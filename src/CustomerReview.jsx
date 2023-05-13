@@ -10,7 +10,6 @@ function CustomerReview() {
  
    useEffect(() => {
     const interval = setInterval(() => {
-        console.log(num);
       setNum(num<4?num+1:0);
     }, 4000);
     return () => clearInterval(interval);

@@ -16,7 +16,7 @@ function ContactUs(){
             <div className="flex  mt-10  gap-5 w-[100%] justify-between">
                <div className="left  flex flex-col  w-full gap-5">
                 <div className="flex flex-col">
-                   <label for="name" className="mb-2"> Your name </label>
+                   <label htmlFor="name" className="mb-2"> Your name </label>
                   <input
                     type="text"
                     id="name"
@@ -25,7 +25,7 @@ function ContactUs(){
                   />
                 </div>
                 <div className="flex flex-col">
-                   <label for="email-id" className=""> Your Email </label> 
+                   <label htmlFor="email-id" className=""> Your Email </label> 
                   <input
                     type="email"
                     id="name"
@@ -35,7 +35,7 @@ function ContactUs(){
                   />
                 </div>
                 <div className="flex flex-col " >
-                   <label for="message" className=""> Message </label> 
+                   <label htmlFor="message" className=""> Message </label> 
                   <textarea
                     id="message"
                     className="border-2 p-2 rounded-md focus:outline-none focus:border-[#2593D2]  resize-none shadow-lg h-28" 

@@ -27,7 +27,7 @@ function App() {
           <Route path='/donateBlood' element = {<Donate/>} />
           <Route path='/chat' element = {<Chat/>} />
           <Route path='/calendar' element = {<Calendar/>} />
-          <Route path='/user' element = {<User/>} />
+          <Route path='/profile' element = {<User/>} />
         </Routes>
         
 

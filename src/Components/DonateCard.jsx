@@ -1,13 +1,12 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-export default function DonateCard({image , name , age , location , bloodGrp}) {
-  const navigate = useNavigate() ; 
-  location = "SSB Hospital Faridabad" ; 
-  const handleLocationClick = ()=>{
+export default function DonateCard({request}) {
 
-        let temp  = location.split(' ').join('+') ; 
-        console.log(temp);
+  const navigate = useNavigate() ;  
+  const handleLocationClick = ()=>{
+        
+        let temp  = request.location.split(' ').join('+') ;
 
         const url = `https://www.google.com/maps?daddr=${temp}`
         window.location = url ; 
@@ -20,10 +19,9 @@ export default function DonateCard({image , name , age , location , bloodGrp}) {
             <img src="../../images/herosection.png" alt="" className='h-[60px]  inline-block object-cover'/>
         </div>
      
-            <div>Name : Aman Gupta  </div>
-            <div>Age : 22 </div>
-            <div>Location : <span onClick={handleLocationClick}>{location}</span></div>
-            <div>Blood Group : B+</div>
+            <div>Name : {request.user_id.firstName + " " + request.user_id.lastName } </div>
+            <div>Location : <span onClick={handleLocationClick}>{request.location}</span></div>
+            <div>Blood Group : {request.user_id.bloodGrp}</div>
             <div className='flex flex-row gap-5 '>
               <button className='p-[10px] border-none rounded bg-red-400 text-white font-semibold' onClick={()=>{navigate('/calendar')}}>Donate Blood</button>
               <button className='p-[10px] border-none rounded bg-red-400 text-white font-semibold'>Chat</button>

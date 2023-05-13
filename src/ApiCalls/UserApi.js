@@ -2,7 +2,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const UserApi = (token) => {
-  const [isLogged, setIsLogged] = useState(false);
   const [user, setUser] = useState();
   const [history, setHistory] = useState();
 
@@ -13,6 +12,7 @@ const UserApi = (token) => {
           Authorization: token,
         },
       });
+      console.log("checking from userApi", res.data);
       setUser(res.data);
     } catch (error) {
       console.log(error.message);
@@ -39,7 +39,7 @@ const UserApi = (token) => {
     }
   }, [token]);
 
-  return { user: [user, setUser], history: [history, setHistory] , isLogged : [isLogged , setIsLogged] };
+  return { user: [user, setUser], history: [history, setHistory] };
 };
 
 export default UserApi;

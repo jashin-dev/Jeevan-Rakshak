@@ -7,8 +7,8 @@ function Navbar() {
   const navigate = useNavigate();
   const state = useContext(AppContext);
 
-  const [isLogged, setIsLogged] = state.userApi.isLogged;
-  const [token, setToken] = state.token;
+  const [isLogged, setIsLogged] = state.isLogged;
+  const [token , setToken] = state.token;
 
   const logoutRouteHandler = async () => {
     try {
@@ -61,6 +61,12 @@ function Navbar() {
         </div>
       </div>
       <div className="flex lg:gap-5 gap-3 text-[#F7F5EB] text-[18px] font-semibold">
+        <button
+          onClick={()=>{navigate('/profile')}}
+          className="max-lg:w-[40vw] px-5 py-2 rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200"
+        >
+          Profile
+        </button>
         <button
           onClick={logoutRouteHandler}
           className="max-lg:w-[40vw] px-5 py-2 rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200"

@@ -7,11 +7,13 @@ export const AppContext = createContext();
 export default function AppContextProvider({ children }) {
   const [token, setToken] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isLogged, setIsLogged] = useState(false);
 
   const refreshToken = async () => {
     try {
       const res = await axios.get("/user/refreshToken");
       setToken(res.data.accessToken);
+      setIsLogged(true) ; 
 
       setTimeout(() => {
         refreshToken();
@@ -23,6 +25,11 @@ export default function AppContextProvider({ children }) {
 
   useEffect(() => {
     const firstLogin = localStorage.getItem("firstLogin");
+    console.log({
+      "firstLogin" : firstLogin , 
+      "token" : token 
+      
+    });
     if (firstLogin) {
       refreshToken();
     }
@@ -30,6 +37,7 @@ export default function AppContextProvider({ children }) {
 
   const value = {
     token: [token, setToken],
+    isLogged : [isLogged , setIsLogged] , 
     userApi: UserApi(token),
     isLoading: [isLoading, setIsLoading],
   };

@@ -10,25 +10,25 @@ import { useNavigate } from 'react-router-dom'
 export default function Home() {
 
   const state = useContext(AppContext) ; 
-  const [token , setToken] = state.token ;
+  const [isLogged , setIsLogged] = state.isLogged 
   const navigate = useNavigate() ; 
 
-
-  useEffect(()=>{
-    if(token === null){
-      navigate('/login') ; 
-      return ; 
+  useEffect(() => {
+    if (!isLogged) {
+      navigate('/login');
     }
-  },[token])
+  }, [isLogged]);
+
   return (
     <div>
-       <Navbar/>
-       <HeroSection/>
-       <HighLight/>
-       <AboutUs/>
-       <CustomerReview/>
-       <Footer/>
-       
+      <Navbar />
+      <HeroSection />
+      <HighLight />
+      <AboutUs />
+      <CustomerReview />
+      <Footer />
     </div>
-  )
+  );
+
+ 
 }

@@ -45,9 +45,9 @@ export default function Registration() {
             Register For a Free Account
           </span>
           <form className="mb-2" action="/" onSubmit={submitHandler}>
-            <div class="flex gap-3">
+            <div className="flex gap-3">
               <div className="mb-2">
-                <label for="firstname" className="block text-xs mb-1 w-1/2">
+                <label htmlFor="firstname" className="block text-xs mb-1 w-1/2">
                   First Name
                 </label>
                 <input
@@ -61,7 +61,7 @@ export default function Registration() {
                 />
               </div>
               <div className="mb-2 ">
-                <label for="lastname" className="block text-xs mb-1 w-1/2">
+                <label htmlFor="lastname" className="block text-xs mb-1 w-1/2">
                   Last Name
                 </label>
                 <input
@@ -76,7 +76,7 @@ export default function Registration() {
               </div>
             </div>
             <div className="mb-2 md:w-full">
-              <label for="email" className="block text-xs mb-1">
+              <label htmlFor="email" className="block text-xs mb-1">
                 Email
               </label>
               <input
@@ -90,7 +90,7 @@ export default function Registration() {
               />
             </div>
             <div className="mb-2 md:w-full">
-              <label for="password" className="block text-xs mb-1">
+              <label htmlFor="password" className="block text-xs mb-1">
                 Password
               </label>
               <input
@@ -104,9 +104,9 @@ export default function Registration() {
               />
             </div>
 
-            <div class="flex gap-3">
+            <div className="flex gap-3">
               <div className="mb-2 w-[50%]">
-                <label for="bloodGrp" className="block text-xs mb-1 w-[50%]">
+                <label htmlFor="bloodGrp" className="block text-xs mb-1 w-[50%]">
                   Blood
                 </label>
                 <select
@@ -114,7 +114,7 @@ export default function Registration() {
                   id="bloodGrp"
                   value={formData.bloodGrp}
                   onChange={changeHandler}
-                  class="w-full border rounded p-2 outline-none focus:border-[#2593D2] "
+                  className="w-full border rounded p-2 outline-none focus:border-[#2593D2] "
                 >
                   <option value={"A+"}>A+</option>
                   <option value={"A-"}>A-</option>
@@ -127,7 +127,7 @@ export default function Registration() {
                 </select>
               </div>
               <div className="mb-2 ">
-                <label for="location" className="block text-xs mb-1 w-1/2">
+                <label htmlFor="location" className="block text-xs mb-1 w-1/2">
                   Location
                 </label>
                 <input
