@@ -1,8 +1,29 @@
-import React, { useState } from 'react'
+import axios from 'axios';
+import React, { useContext, useState } from 'react'
+import { AppContext } from '../Context/AppContext';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
-
+     
+    const navigate = useNavigate() ; 
+    const state = useContext(AppContext) ; 
+    const [token , setToken] = state.token ; 
+    const [isLogged , setIsLogged] = state.userApi.isLogged ; 
     const [formData, setFormData] = useState({ email: "", password: "" });
+    const login = async()=>{
+        try {
+            const res = await axios.post('/user/login' , formData ) ; 
+            const accessToken = res.data.accessToken ; 
+            setToken(accessToken) ; 
+            setIsLogged(true) ; 
+            localStorage.setItem("firstLogin" , true) ; 
+            navigate('/') ; 
+            
+        } catch (error) {
+            console.log(error.message) ; 
+        }
+
+    }
     const changeHandler = (e) => {
 
         setFormData((prevState) => {
@@ -15,15 +36,18 @@ export default function Login() {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        console.log(formData);
+        login() ; 
+
+        
     }
+
     return (
         <div>
             <div className="flex items-center max-lg:h-screen lg:h-[88vh] w-full justify-center bg-[url('../public/images/background.png')]  bg bg-no-repeat rounded-xl relative">
             <div class="backdrop-blur-md h-full w-full absolute right-0 left-0 top-0 bottom-0 z-10 rounded-xl opacity-30 bg-white"></div>
                 <div className="w-[40%] min-w-[360px] bg-white rounded-xl shadow-xl px-10 pt-20 pb-16 m-4 md:max-w-sm md:mx-auto border z-20">
                     <span className="block w-full text-3xl uppercase font-bold mb-10">Login</span>
-                    <form className="mb-4" action="/" onSubmit={submitHandler}>
+                    <form className="mb-4"  onSubmit={submitHandler}>
                         <div className="mb-4 md:w-full">
                             <label for="email" className="block text-xs mb-1">Username or Email</label>
                             <input className="w-full border rounded p-2 outline-none focus:border-[#2593D2]" type="email" name="email" id="email" placeholder="Username or Email" value = {formData.email} onChange = {changeHandler}/>

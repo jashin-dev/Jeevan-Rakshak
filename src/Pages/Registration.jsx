@@ -1,12 +1,28 @@
+import axios from "axios";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Registration() {
+
+  const navigate = useNavigate() ; 
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     password: "",
+    bloodGrp: "",
+    pincode: "",
   });
+
+  const register = async () => {
+    try {
+      const res = await axios.post("/user/register", formData);
+      navigate("/login");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   const changeHandler = (e) => {
     setFormData((prevState) => {
       return {
@@ -18,7 +34,7 @@ export default function Registration() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(formData);
+    register() ; 
   };
   return (
     <div>
@@ -37,6 +53,7 @@ export default function Registration() {
                 <input
                   className="w-full border rounded p-2 outline-none focus:border-[#2593D2]"
                   type="text"
+                  name="firstName"
                   id="firstname"
                   placeholder="First Name"
                   value={formData.firstname}
@@ -49,6 +66,7 @@ export default function Registration() {
                 </label>
                 <input
                   className="w-full border rounded p-2 outline-none focus:border-[#2593D2]"
+                  name="lastName"
                   type="text"
                   id="lastname"
                   placeholder="Last Name"
@@ -85,41 +103,28 @@ export default function Registration() {
                 onChange={changeHandler}
               />
             </div>
-            <div className="mb-4 md:w-full">
-              <label for="confirm_password" className="block text-xs mb-1">
-                Confirm Password
-              </label>
-              <input
-                className="w-full border rounded p-2 outline-none focus:border-[#2593D2]"
-                type="password"
-                name="confirm_password"
-                id="confirm_password"
-                placeholder="Confirm Password"
-                value={formData.confirm_password}
-                onChange={changeHandler}
-              />
-            </div>
+
             <div class="flex gap-3">
-            <div className="mb-2 w-[50%]">
-            <label for="bloodGrp" className="block text-xs mb-1 w-[50%]">
-                  Blood 
+              <div className="mb-2 w-[50%]">
+                <label for="bloodGrp" className="block text-xs mb-1 w-[50%]">
+                  Blood
                 </label>
-              <select
-                name="bloodGrp"
-                id="bloodGrp"
-                value={formData.bloodGrp}
-                onChange={changeHandler}
-                class="w-full border rounded p-2 outline-none focus:border-[#2593D2] "
-              >
-                <option value={"A+"}>A+</option>
-                <option value={"A-"}>A-</option>
-                <option value={"B+"}>B+</option>
-                <option value={"B-"}>B-</option>
-                <option value={"AB-"}>AB-</option>
-                <option value={"AB-"}>AB-</option>
-                <option value={"O+"}>O+</option>
-                <option value={"O-"}>O-</option>
-              </select>
+                <select
+                  name="bloodGrp"
+                  id="bloodGrp"
+                  value={formData.bloodGrp}
+                  onChange={changeHandler}
+                  class="w-full border rounded p-2 outline-none focus:border-[#2593D2] "
+                >
+                  <option value={"A+"}>A+</option>
+                  <option value={"A-"}>A-</option>
+                  <option value={"B+"}>B+</option>
+                  <option value={"B-"}>B-</option>
+                  <option value={"AB-"}>AB-</option>
+                  <option value={"AB-"}>AB-</option>
+                  <option value={"O+"}>O+</option>
+                  <option value={"O-"}>O-</option>
+                </select>
               </div>
               <div className="mb-2 ">
                 <label for="location" className="block text-xs mb-1 w-1/2">
@@ -128,13 +133,14 @@ export default function Registration() {
                 <input
                   className="w-full border rounded p-2 outline-none focus:border-[#2593D2]"
                   type="text"
-                  id="lastname"
+                  id="location"
+                  name="pincode"
                   placeholder="Pincode"
-                  value={formData.location}
+                  value={formData.pincode}
                   onChange={changeHandler}
                 />
               </div>
-              </div>
+            </div>
             <button className="bg-[#f45454] hover:bg-[#dc4545] text-white uppercase text-sm font-semibold px-4 py-2 rounded">
               Sign Up{" "}
             </button>
