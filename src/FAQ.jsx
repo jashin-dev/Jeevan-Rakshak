@@ -1,7 +1,7 @@
-import { useState } from "react";
+
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import questions from "./faq_data"
+import questions from "./Components/faq_data"
 import Question from "./Components/Question";
 
 

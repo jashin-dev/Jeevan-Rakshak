@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../Context/AppContext';
 import { useNavigate } from 'react-router-dom';
 
@@ -40,6 +40,12 @@ export default function Login() {
 
         
     }
+
+    useEffect(()=>{
+        if(isLogged){
+            navigate('/') ; 
+        }
+    },[isLogged])
 
     return (
         <div>

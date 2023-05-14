@@ -13,10 +13,30 @@ export default function Registration() {
     bloodGrp: "",
     pincode: "",
   });
+  
+
+
+
 
   const register = async () => {
     try {
       const res = await axios.post("/user/register", formData);
+
+
+      var data = {
+        "username": formData.firstName + " " + formData.lastName,
+        "secret": "secret-123-jBj02",
+        "email": formData.email,
+        "first_name": formData.firstName,
+        "last_name": formData.lastName,
+      };
+
+
+      await axios.post('https://api.chatengine.io/users/' , data , {
+        headers : { 
+          'PRIVATE-KEY': '{d15833e0-d68b-4d51-babd-ff8a1f2502b0}'
+        }
+      })
       navigate("/login");
     } catch (error) {
       console.log(error.message);

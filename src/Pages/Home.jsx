@@ -14,7 +14,8 @@ export default function Home() {
   const navigate = useNavigate() ; 
 
   useEffect(() => {
-    if (!isLogged) {
+    console.log("checking from home" , isLogged);
+    if (isLogged===false) {
       navigate('/login');
     }
   }, [isLogged]);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import { useContext } from "react";
@@ -10,7 +10,12 @@ export default function User() {
   const state = useContext(AppContext) ; 
   const [user , setUser] = state.userApi.user 
   const [history , setHistory] = state.userApi.history ; 
-  console.log(user);
+  
+  useEffect(()=>{
+     console.log(history);
+  },[user])
+  
+
   return (
     <div>
       <Navbar />
@@ -90,10 +95,10 @@ export default function User() {
 
       <div>
         <ul>
-          {history.requestArr.map((ele)=>(<li>ele.donor_id</li>))}
+          {history.requestArr.map((ele , index)=>(<li key={index}>{ele.donor_id}</li>))}
         </ul>
         <ul>
-          {history.donatesArr.map((ele)=>(<li>ele._id</li>))}
+          {history.donatesArr.map((ele , index)=>(<li key={index}>{ele._id}</li>))}
         </ul>
       </div>
 

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import AppContextProvider, { AppContext } from "./Context/AppContext";
+import  { AppContext } from "./Context/AppContext";
 import axios from "axios";
 
 function Navbar() {

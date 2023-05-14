@@ -27,13 +27,14 @@ export default function AppContextProvider({ children }) {
     const firstLogin = localStorage.getItem("firstLogin");
     console.log({
       "firstLogin" : firstLogin , 
-      "token" : token 
+      "token" : token , 
+      "isLogged" : isLogged
       
     });
     if (firstLogin) {
       refreshToken();
     }
-  }, [token]);
+  }, [isLogged]);
 
   const value = {
     token: [token, setToken],
