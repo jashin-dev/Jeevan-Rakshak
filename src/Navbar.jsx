@@ -63,13 +63,13 @@ function Navbar() {
       <div className="flex lg:gap-5 gap-3 text-[#F7F5EB] text-[18px] font-semibold">
         <button
           onClick={()=>{navigate('/profile')}}
-          className="max-lg:w-[40vw] px-5 py-2 rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200"
+          className="max-lg:w-[40vw] px-5 py-2 rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200 opacity-100"
         >
           Profile
         </button>
         <button
           onClick={logoutRouteHandler}
-          className="max-lg:w-[40vw] px-5 py-2 rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200"
+          className="max-lg:w-[40vw] px-5 py-2 rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200 opacity-100"
         >
           Logout
         </button>

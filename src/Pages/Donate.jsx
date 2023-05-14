@@ -10,10 +10,14 @@ import { useContext } from "react";
 
 export default function Donate() {
   const state = useContext(AppContext);
+ 
   const [token, setToken] = state.token;
   const [user, setUser] = state.userApi.user;
-  const [arr, setArr] = useState([]);
 
+  const [arr, setArr] = useState([]);
+  const [ind,pagesHandler]=useState(0);
+ 
+  
   const getRequest = async () => {
     try {
       const res = await axios.get("/request/getAllRequest");
@@ -42,15 +46,40 @@ export default function Donate() {
   
 
   return (
-    <div className="flex flex-col gap-5 bg-white justify-center items-center rounded-xl ">
+    <div className="">
       <Navbar />
-      <div className="text-4xl font-bold pt-10">Requests</div>
-      <div className="flex flex-wrap justify-center items-center p-10 gap-10 pb-32">
-          
+      <div className="text-4xl font-bold pt-10 text-center p-4 m-4">Requests</div>
+      {/* <div className="flex flex-wrap justify-center items-center p-10  pb-32">
+      <div className='bg-white w-full h-[80px] items-center justify-center gap-[150px] flex flex-row rounded-md  p-5'>
+            <div>Name </div>
+            <div>Location </div>
+            <div>Blood Group </div>
+      </div>
+ 
           {
             arr.map((element , index) => (<DonateCard key = {index} request = {element} />)) 
           }
-      </div>
+      </div> */}
+      <div className="w-full max-w-[850px] mx-auto mb-[200px] flex flex-col gap-5 bg-white justify-center items-center rounded-xl ">
+      <table className="w-full">
+        <thead className="border">
+          <tr className="text-left">
+            <th className=" py-2 w-[100px]"></th>
+            <th className="py-2 w-[180px] ">Name</th>
+            <th className="py-2 w-[180px]">Location</th>
+            <th className=" py-2 w-[150px]">Blood Group</th>
+            <th ></th>
+          </tr>
+        </thead>
+        <tbody>
+        {   
+            arr.splice(ind,ind+10).map((element , index) => (<DonateCard key = {index} request = {element} />)) 
+          }
+        
+        </tbody>
+      </table>
+      {arr.length>10?<div>{ind>=10?<div onclick={pagesHandler(ind-10)} className="cursor-pointer">Prev</div>:<></>}<div onclick={pagesHandler(ind+10)} className="cursor-pointer">Next</div></div>:<></>}
+    </div>
       <Footer />
     </div>
   );
