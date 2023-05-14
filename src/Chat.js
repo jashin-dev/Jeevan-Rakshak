@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Chat.css";
 
 import { ChatEngine, getOrCreateChat } from "react-chat-engine";
@@ -7,11 +7,14 @@ import Navbar from "./Navbar";
 import { AppContext } from "./Context/AppContext";
 
 const Chat = () => {
-  
-  const state  = useContext(AppContext) ; 
-  const [user , setUser] = state.user ; 
   const [username, setUsername] = useState("");
+  const state = useContext(AppContext) ; 
+  const [user , setUser] = state.userApi.user;
+   
 
+  useEffect(()=>{
+     console.log("checking from chat" , user);
+  },[user])
   function createDirectChat(creds) {
     getOrCreateChat(
       creds,
@@ -21,6 +24,7 @@ const Chat = () => {
   }
 
   function renderChatForm(creds) {
+	console.log(creds);
     return (
       <div>
         <div>
@@ -40,8 +44,8 @@ const Chat = () => {
       <Navbar />
       <ChatEngine
         height="100vh"
-        userName="user2"
-        userSecret="123456"
+        userName={user.firstName + " " + user.lastName}
+        userSecret="secret-123-jBj02"
         projectID="75218d99-ca1d-44d9-90dc-7eaf8a5d512c"
         renderNewChatForm={(creds) => renderChatForm(creds)}
       />
