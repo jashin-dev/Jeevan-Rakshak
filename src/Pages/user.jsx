@@ -107,7 +107,7 @@ export default function User() {
         </div>
       </div>
     <div className="m-5 p-2 text-2xl font-bold pl-5">My Requests</div>
-      <div className="pl-5">
+      <div className="pl-5 mb-20">
         <ul className="flex flex-row">
           {history.requestArr.map((ele, index) => (
             <ul className="p-10 m-5 w-[300px] bg-white border rounded-md">
@@ -136,7 +136,7 @@ export default function User() {
         </ul>
       </div>
       <div className="m-5 p-2 text-2xl font-bold pl-5">My Donations</div> 
-      <div className="pl-5">
+      <div className="pl-5 mb-20">
         <ul className="flex flex-row">
           {history.donatesArr.map((ele, index) => (
             <ul className="p-10 m-5 w-[300px] bg-white border rounded-md">
