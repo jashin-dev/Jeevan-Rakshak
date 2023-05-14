@@ -1,8 +1,9 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import { useState } from 'react';
 export default function DonateCard({request}) {
-
+  const[collapse,setCollapse]=useState(false);
+  const handleCollapse = ()=>{setCollapse(collapse=>!collapse)} 
   const navigate = useNavigate() ;  
   const handleLocationClick = ()=>{
         
@@ -13,22 +14,20 @@ export default function DonateCard({request}) {
          
   }
   return (
-    
-      <div className='bg-white w-full h-[80px] items-center justify-between flex flex-row rounded-md gap-3 border shadow-md p-5 hover:scale-105 transition-all duration-200'>
-        <div>
-            <img src="../../images/herosection.png" alt="" className='h-[60px]  inline-block object-cover'/>
-        </div>
-     
-            <div>Name : {request.user_id.firstName + " " + request.user_id.lastName } </div>
-            <div>Location : <span onClick={handleLocationClick}>{request.location}</span></div>
-            <div>Blood Group : {request.user_id.bloodGrp}</div>
-            <div className='flex flex-row gap-5 '>
-              <button className='p-[10px] border-none rounded bg-red-400 text-white font-semibold' onClick={()=>{navigate('/calendar')}}>Donate Blood</button>
-              <button className='p-[10px] border-none rounded bg-red-400 text-white font-semibold' onClick={()=>{navigate('/chat')}}>Chat</button>
-            </div>
+    <tr className='bg-white  rounded-md border shadow-md   transition-all duration-200' onClick={handleCollapse}>
+   
+      <td className='p-2'>
+          <img src="../../images/herosection.png" alt="" className='h-[60px]  inline-block object-cover'/>
+      </td>
+   
+          <td>{request.user_id.firstName + " " + request.user_id.lastName } </td>
+          <td className='hover:cursor-pointer'><span onClick={handleLocationClick}>{request.location}</span></td>
+          <td>{request.user_id.bloodGrp}</td>
+          <td className='flex flex-row gap-5 p-4'>
+            <button className='p-[10px] border-none rounded bg-[#f45454] text-white font-semibold hover:bg-[#e84343]' onClick={()=>{navigate('/calendar')}}>Donate Blood</button>
+            <button className='p-[10px] border-none rounded bg-[#f45454] text-white font-semibold hover:bg-[#e84343]' onClick={()=>{navigate('/chat')}}>Chat</button>
+          </td>
 
-       
-      </div>
-    
-  )
+</tr>
+      )
 }
