@@ -106,8 +106,7 @@ export default function User() {
           </div>
         </div>
       </div>
-      <div className="m-5 p-2 text-2xl font-bold pl-5">My Requests</div>
-      {console.log(history.requestArr)}
+    <div className="m-5 p-2 text-2xl font-bold pl-5">My Requests</div>
       <div className="pl-5">
         <ul className="flex flex-row">
           {history.requestArr.map((ele, index) => (
@@ -135,13 +134,36 @@ export default function User() {
             </ul>
           ))}
         </ul>
-        <ul>
-          {history.requestArr.map((ele, index) => (
-            <li key={index}>{ele._id}</li>
+      </div>
+      <div className="m-5 p-2 text-2xl font-bold pl-5">My Donations</div> 
+      <div className="pl-5">
+        <ul className="flex flex-row">
+          {history.donatesArr.map((ele, index) => (
+            <ul className="p-10 m-5 w-[300px] bg-white border rounded-md">
+              <li>
+                <img
+                  src="./images/user_avatar.png"
+                  className=" w-[60px] mx-auto mb-4 rounded-full"
+                  alt=""
+                />
+              </li>
+              <li key={index} className="flex flex-col">
+                <div className="font-bold">Status:</div>
+                {ele.status}
+              </li>
+              {ele.status==="Assigned"?
+              <li key={index} className="flex flex-col">
+                <div className="font-bold">Donor Id:{ele.donor_id}</div>
+              </li>:<></>}
+
+              <li key={index} className="flex flex-col">
+                <div className="font-bold">Description:</div>
+                {ele.desc}
+              </li>
+            </ul>
           ))}
         </ul>
       </div>
-
       <Footer />
     </div>
   );
