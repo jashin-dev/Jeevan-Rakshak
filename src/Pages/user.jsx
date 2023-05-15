@@ -130,7 +130,7 @@ export default function User() {
               </li>
               {ele.status==="Assigned"?
               <li key={index} className="flex flex-col">
-                <div className="font-bold">Donor Id:{ele.donor_id}</div>
+                <div className="font-bold">Donor Name:{ele.donor_id.firstName + " " + ele.donor_id.lastName}</div>
               </li>:<></>}
 
               <li key={index} className="flex flex-col">
@@ -164,7 +164,7 @@ export default function User() {
               </li>
               {ele.status==="Assigned"?
               <li key={index} className="flex flex-col">
-                <div className="font-bold">Donor Id:{ele.donor_id}</div>
+                <div className="font-bold">Request Name:{ele.user_id.firstName + " " + ele.user_id.lastName}</div>
               </li>:<></>}
 
               <li key={index} className="flex flex-col">
