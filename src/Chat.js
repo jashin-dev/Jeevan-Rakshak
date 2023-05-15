@@ -10,17 +10,6 @@ const Chat = () => {
   const [username, setUsername] = useState(location?.state?.name);
   const state = useContext(AppContext) ; 
   const [user , setUser] = state.userApi.user;
-
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  
-  useEffect(() => {
-    if (user) {
-      setFirstName(user.firstName);
-      setLastName(user.lastName);
-      
-    }
-  }, [user]);
    
 
   useEffect(()=>{
@@ -57,7 +46,7 @@ const Chat = () => {
       <Navbar />
       <ChatEngine
         height="100vh"
-        userName={firstName + " " + lastName}
+        userName={user.firstName + " " + user.lastName}
         userSecret="secret-123-jBj02"
         projectID="75218d99-ca1d-44d9-90dc-7eaf8a5d512c"
         renderNewChatForm={(creds) => renderChatForm(creds)}
