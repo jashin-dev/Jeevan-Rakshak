@@ -18,7 +18,7 @@ export default function DonateCard({ request }) {
     try {
 
       console.log(token);
-      const res = await axios.put(`/request/donate/${request._id}`, {
+      const res = await axios.put(`/request/donate/${request._id}`,{} , {
         headers : {
           Authorization : token 
         }
