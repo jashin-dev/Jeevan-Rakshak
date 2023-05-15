@@ -16,6 +16,7 @@ export default function Donate() {
 
   const [arr, setArr] = useState([]);
   const [ind,pagesHandler]=useState(0);
+  
  
   
   const getRequest = async () => {
@@ -40,8 +41,10 @@ export default function Donate() {
   };
 
   useEffect(()=>{
-    getRequest() ; 
-  },[token])
+    if(user){ 
+      getRequest() ; 
+    }
+  },[user])
 
   
 
@@ -49,17 +52,7 @@ export default function Donate() {
     <div className="">
       <Navbar />
       <div className="text-4xl font-bold pt-10 text-center p-4 m-4">Requests</div>
-      {/* <div className="flex flex-wrap justify-center items-center p-10  pb-32">
-      <div className='bg-white w-full h-[80px] items-center justify-center gap-[150px] flex flex-row rounded-md  p-5'>
-            <div>Name </div>
-            <div>Location </div>
-            <div>Blood Group </div>
-      </div>
- 
-          {
-            arr.map((element , index) => (<DonateCard key = {index} request = {element} />)) 
-          }
-      </div> */}
+     
       <div className="w-full max-w-[850px] mx-auto mb-[200px] flex flex-col gap-5 bg-white justify-center items-center rounded-xl ">
       <table className="w-full">
         <thead className="border">
