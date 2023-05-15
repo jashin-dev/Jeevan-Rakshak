@@ -16,6 +16,7 @@ const Chat = () => {
      console.log("checking from chat" , user);
   },[user])
   function createDirectChat(creds) {
+    console.log("checking creds " , creds);
     getOrCreateChat(
       creds,
       { is_direct_chat: true, usernames: [username] },
