@@ -70,12 +70,12 @@ function Navbar() {
         >
           <img src="./images/user_avatar.png" className="w-[40px] rounded-full" alt="" />
         </button>
-        <button
+        {/* <button
           onClick={chatRouteHandler}
           className="max-lg:w-[40vw] px-5 py-2 rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200 opacity-100"
         >
           Chat
-        </button>
+        </button> */}
         <button
           onClick={logoutRouteHandler}
           className="max-lg:w-[40vw] px-5 py-2 rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200 opacity-100"
