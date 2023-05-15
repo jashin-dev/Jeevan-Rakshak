@@ -16,6 +16,8 @@ export default function DonateCard({ request }) {
 
   const handleDonateClick = async () => {
     try {
+
+      console.log(token);
       const res = await axios.put(`/request/donate/${request._id}`, {
         headers : {
           Authorization : token 
@@ -28,7 +30,7 @@ export default function DonateCard({ request }) {
     }
   };
   return (
-    <tr className='bg-white  rounded-md border shadow-md   transition-all duration-200' onClick={handleCollapse}>
+    <tr className='bg-white  rounded-md border shadow-md   transition-all duration-200' >
    
       <td className='p-2'>
           <img src="./images/user_avatar.png" alt="" className='h-[60px]  inline-block object-cover rounded-full'/>
@@ -38,7 +40,7 @@ export default function DonateCard({ request }) {
           <td className='hover:cursor-pointer overflow-hidden'><span onClick={handleLocationClick} >{request.location}</span></td>
           <td>{request.user_id.bloodGrp}</td>
           <td className='flex flex-row gap-5 p-4'>
-            <button className='p-[10px] border-none rounded bg-[#f45454] text-white font-semibold hover:bg-[#e84343]' onClick={()=>{navigate('/calendar')}}>Donate Blood</button>
+            <button className='p-[10px] border-none rounded bg-[#f45454] text-white font-semibold hover:bg-[#e84343]' onClick={handleDonateClick}>Donate Blood</button>
             <button className='p-[10px] border-none rounded bg-[#f45454] text-white font-semibold hover:bg-[#e84343]' onClick={()=>{navigate('/chat')}}>Chat</button>
           </td>
 
