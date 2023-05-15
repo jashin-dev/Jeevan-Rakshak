@@ -15,7 +15,7 @@ import User from "./Pages/user"
 function App() {
   return (
     <div className="w-[100vw] m-0 p-0 h-[100vh] overflow-y-auto overflow-x-hidden bg-[#fedcdc] lg:pt-[50px] scroll-smooth">
-      <div className="lg:w-[80%] w-full max-w-[1260px] bg-white h-fit mx-auto rounded-xl shadow-2xl "
+      <div className="lg:w-[80%] full-site:w-full w-full max-w-[1260px] bg-white h-fit mx-auto rounded-xl shadow-2xl "
       >
         <Routes>
           <Route path='/' element={<Home />} />

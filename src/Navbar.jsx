@@ -50,18 +50,24 @@ function Navbar() {
           <span className="font-bold text-[#f45454]">eevan</span>Rakshak
         </div>
       </div>
-      <div className="flex justify-center sticky lg:gap-8  gap-3 text-[18px] py-2 text-[#7C7C7C] font-semibold lg:flex-row flex-col max-lg:w-full">
-        <div className="hover:text-lightBlue transition-all duration-200 hover:cursor-pointer max-lg:w-full max-lg:text-center   max-lg:hover:bg-slate-100">
+      <div className="flex justify-center sticky lg:gap-8   text-[18px] py-2 text-[#7C7C7C] font-semibold lg:flex-row flex-col max-lg:w-full">
+        <div className=" rounded-md  hover:scale-105 max-lg:py-2 hover:text-lightBlue transition-all duration-200 hover:cursor-pointer max-lg:w-full max-lg:text-center   max-lg:hover:bg-slate-100">
           <div onClick={FAQRouteHandler}>FAQ</div>
         </div>
-        <div className="hover:text-lightBlue transition-all duration-200 max-lg:w-full max-lg:text-center  max-lg:hover:bg-slate-100">
+        <div className=" rounded-md  hover:scale-105 max-lg:py-2 hover:text-lightBlue transition-all duration-200 max-lg:w-full max-lg:text-center  max-lg:hover:bg-slate-100">
           <a onClick={homeRouteHandler} href="#aboutus">
             About Us
           </a>
         </div>
-        <div className="hover:text-lightBlue transition-all duration-200 hover:cursor-pointer max-lg:w-full max-lg:text-center  max-lg:hover:bg-slate-100">
+        <div className= " rounded-md  hover:scale-105 max-lg:py-2 hover:text-lightBlue transition-all duration-200 hover:cursor-pointer max-lg:w-full max-lg:text-center  max-lg:hover:bg-slate-100">
           <div onClick={contactRouteHandler}>Contact Us</div>
         </div>
+        <button
+          onClick={()=>{navigate('/profile')}}
+          className="  rounded-md  hover:scale-105 max-lg:py-2 hover:text-lightBlue transition-all duration-200 opacity-100 lg:hidden max-lg:w-full max-lg:text-center  max-lg:hover:bg-slate-100 "
+        >
+          Profile
+        </button>
       </div>
       <div className="flex lg:gap-5 gap-3 text-[#F7F5EB] text-[18px] font-semibold">
         <button
