@@ -3,6 +3,8 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 import { useContext } from "react";
 import { AppContext } from "../Context/AppContext";
+import { format } from 'date-fns';
+import dateFormat from 'dateformat';
 
 export default function User() {
   const state = useContext(AppContext);
@@ -119,6 +121,10 @@ export default function User() {
                 />
               </li>
               <li key={index} className="flex flex-col">
+                <div className="font-bold">Date:</div>
+                {dateFormat(ele.createdAt, "mmmm dS, yyyy")}
+              </li>
+              <li key={index} className="flex flex-col">
                 <div className="font-bold">Status:</div>
                 {ele.status}
               </li>
@@ -146,6 +152,11 @@ export default function User() {
                   className=" w-[60px] mx-auto mb-4 rounded-full"
                   alt=""
                 />
+              </li>
+           
+              <li key={index} className="flex flex-col">
+                <div className="font-bold">Date:</div>
+                {ele.createdAt}
               </li>
               <li key={index} className="flex flex-col">
                 <div className="font-bold">Status:</div>

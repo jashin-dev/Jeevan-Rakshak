@@ -24,6 +24,9 @@ function Navbar() {
   const registerRouteHandler = () => {
     navigate("/registration");
   };
+  const chatRouteHandler=()=>{
+    navigate("/chat");
+  }
   const contactRouteHandler = () => {
     navigate("/contactus");
   };
@@ -66,6 +69,12 @@ function Navbar() {
           className="max-lg:w-[40vw]  rounded-md  hover:scale-105 transition-all duration-200 opacity-100"
         >
           <img src="./images/user_avatar.png" className="w-[40px] rounded-full" alt="" />
+        </button>
+        <button
+          onClick={chatRouteHandler}
+          className="max-lg:w-[40vw] px-5 py-2 rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200 opacity-100"
+        >
+          Chat
         </button>
         <button
           onClick={logoutRouteHandler}
