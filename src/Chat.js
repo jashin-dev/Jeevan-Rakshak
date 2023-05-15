@@ -7,7 +7,7 @@ import Navbar from "./Navbar";
 import { AppContext } from "./Context/AppContext";
 const Chat = () => {
   const location=useLocation();
-  const [username, setUsername] = useState(location.state.name);
+  const [username, setUsername] = useState(location?.state?.name);
   const state = useContext(AppContext) ; 
   const [user , setUser] = state.userApi.user;
    
