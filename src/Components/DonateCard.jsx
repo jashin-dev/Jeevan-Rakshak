@@ -11,7 +11,8 @@ export default function DonateCard({ request }) {
     let temp = request.location.split(" ").join("+");
 
     const url = `https://www.google.com/maps?daddr=${temp}`;
-    window.location = url;
+    window.open(url, '_blank', 'noopener,noreferrer');
+   
   };
   const name=request.user_id.firstName + " " + request.user_id.lastName;
 function goToChat(){
