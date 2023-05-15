@@ -38,7 +38,7 @@ function Navbar() {
   };
   return (
     <nav
-      className="w-full flex justify-between items-center p-[10px] px-[30px] lg:flex-row flex-col sticky lg:-top-[50px] rounded-lg border-b-2 bg-white opacity-90 backdrop-blur-sm z-50 -top-[180px]"
+      className="w-full flex justify-between items-center p-[10px] px-[30px] lg:flex-row flex-col sticky lg:-top-[50px] rounded-lg border-b-2 bg-white opacity-90 backdrop-blur-sm z-50 -top-[250px]"
       id="nav"
     >
       <div

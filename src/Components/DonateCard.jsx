@@ -14,8 +14,8 @@ export default function DonateCard({ request }) {
     window.open(url, '_blank', 'noopener,noreferrer');
    
   };
+  function goToChat(){
   const name=request.user_id.firstName + " " + request.user_id.lastName;
-function goToChat(){
   navigate('/chat',{state:{name: name}})
   
 } 
