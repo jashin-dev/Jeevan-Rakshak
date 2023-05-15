@@ -8,34 +8,44 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export default function RequestForm() {
-
-  const navigate = useNavigate() ; 
+  const navigate = useNavigate();
   const state = useContext(AppContext);
-  const [token , setToken] = state.token ; 
+  const [token, setToken] = state.token;
   const [user, setUser] = state.userApi.user;
   const [formData, setFormData] = useState({
-    location : "",
-    desc : ""
+    location: "",
+    desc: "",
   });
 
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [bloodGrp, setBloodGrp] = useState("");
 
-  const postRequest = async()=>{
+  useEffect(() => {
+    if (user) {
+      setFirstName(user.firstName);
+      setLastName(user.lastName);
+      setEmail(user.email);
+      setBloodGrp(user.bloodGrp);
+    }
+  }, [user]);
+  const postRequest = async () => {
     try {
-      await axios.post('request/addRequest' , formData , {
-        headers : {
-          Authorization : token 
-        }
-      }) ; 
+      await axios.post("request/addRequest", formData, {
+        headers: {
+          Authorization: token,
+        },
+      });
     } catch (error) {
       console.log(error.message);
     }
-  }
-  
+  };
+
   const submitHandler = (e) => {
     e.preventDefault();
-    postRequest() ; 
-    navigate('/') ; 
-    
+    postRequest();
+    navigate("/");
   };
 
   const changeHandler = (e) => {
@@ -46,8 +56,6 @@ export default function RequestForm() {
       };
     });
   };
-
-
 
   return (
     <div className="">
@@ -69,7 +77,7 @@ export default function RequestForm() {
                   type="text"
                   placeholder="Patient First Name"
                   name="firstName"
-                  value={user.firstName}
+                  value={firstName}
                 />
               </div>
               <div>
@@ -81,7 +89,7 @@ export default function RequestForm() {
                   type="text"
                   placeholder="Patient Last Name"
                   name="lastName"
-                  value={user.lastName}
+                  value={lastName}
                 />
               </div>
             </div>
@@ -94,28 +102,20 @@ export default function RequestForm() {
                 type="email"
                 placeholder="Patient Email-Id"
                 name="email"
-                value={user.email}
+                value={email}
               />
             </div>
             <div>
               <label htmlFor="bloodGrp" className="block text-xs mb-1 w-1/2">
                 Blood Group
               </label>
-              <select
+              <input
                 name="bloodGrp"
                 id="bloodGrp"
-                value={user.bloodGrp}
+                value={bloodGrp}
                 className="w-full border rounded p-2 outline-none focus:border-[#2593D2]"
               >
-                <option value={"A+"}>A+</option>
-                <option value={"A-"}>A-</option>
-                <option value={"B+"}>B+</option>
-                <option value={"B-"}>B-</option>
-                <option value={"AB-"}>AB-</option>
-                <option value={"AB-"}>AB-</option>
-                <option value={"O+"}>O+</option>
-                <option value={"O-"}>O-</option>
-              </select>
+              </input>
             </div>
 
             <div>
@@ -125,7 +125,7 @@ export default function RequestForm() {
               <input
                 className="w-full border rounded p-2 outline-none focus:border-[#2593D2]"
                 type="text"
-                id = "Location"
+                id="Location"
                 placeholder="Hospital Address"
                 name="location"
                 value={formData.location}

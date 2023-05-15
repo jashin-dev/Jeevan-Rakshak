@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import { useContext } from "react";
@@ -10,10 +10,31 @@ export default function User() {
   const state = useContext(AppContext);
   const [user, setUser] = state.userApi.user;
   const [history, setHistory] = state.userApi.history;
+  
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [bloodGrp, setBloodGrp] = useState("");  
+  const [pincode, setPincode] = useState("");  
+  const [requests , setRequests] = useState([]) ; 
+  const [donates , setDonates] = useState([]) ; 
+
 
   useEffect(() => {
-    console.log(history);
-  }, [user]);
+    if (user && history) {
+      setFirstName(user.firstName);
+      setLastName(user.lastName);
+      setEmail(user.email);
+      setBloodGrp(user.bloodGrp);
+      setPincode(user.pincode) ; 
+      setRequests(history.requestArr) ; 
+      setDonates(history.donatesArr) ; 
+
+    }
+  }, [user , history]);
+
+  
+ 
 
   return (
     <div>
@@ -37,7 +58,7 @@ export default function User() {
               type="text"
               id="fname"
               name="fname"
-              value={user.firstName}
+              value={firstName}
               readOnly
               className="appearance-none bg-gray-200 border-2 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
@@ -53,7 +74,7 @@ export default function User() {
               type="text"
               id="lname"
               name="lname"
-              value={user.lastName}
+              value={lastName}
               readOnly
               className="appearance-none bg-gray-200 border-2 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
@@ -67,7 +88,7 @@ export default function User() {
             type="email"
             id="email"
             name="email"
-            value={user.email}
+            value={email}
             readOnly
             className="appearance-none bg-gray-200 border-2 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
@@ -85,7 +106,7 @@ export default function User() {
               type="text"
               id="pincode"
               name="pincode"
-              value={user.pincode}
+              value={pincode}
               readOnly
               className="appearance-none bg-gray-200 border-2 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
@@ -101,7 +122,7 @@ export default function User() {
               type="text"
               id="group"
               name="group"
-              value={user.bloodGrp}
+              value={bloodGrp}
               readOnly
               className="appearance-none bg-gray-200 border-2 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
@@ -111,7 +132,7 @@ export default function User() {
     <div className="m-5 p-2 text-2xl font-bold pl-5">My Requests</div>
       <div className="pl-5 mb-20">
         <ul className="flex flex-row">
-          {history.requestArr.map((ele, index) => (
+          {requests.map((ele, index) => (
             <ul className="p-10 m-5 w-[300px] bg-white border rounded-md">
               <li>
                 <img
@@ -144,7 +165,7 @@ export default function User() {
       <div className="m-5 p-2 text-2xl font-bold pl-5">My Donations</div> 
       <div className="pl-5 mb-20">
         <ul className="flex flex-row">
-          {history.donatesArr.map((ele, index) => (
+          {donates.map((ele, index) => (
             <ul className="p-10 m-5 w-[300px] bg-white border rounded-md">
               <li>
                 <img
