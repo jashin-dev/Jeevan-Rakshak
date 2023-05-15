@@ -17,15 +17,18 @@ const Chat = () => {
   },[user])
   function createDirectChat(creds) {
     console.log("checking creds " , creds);
-    getOrCreateChat(
-      creds,
-      { is_direct_chat: true, usernames: [username] },
-      () => setUsername("")
-    );
+    if(location?.state?.name){
+      getOrCreateChat(
+        creds,
+        { is_direct_chat: true, usernames: [username] },
+        () => setUsername("")
+      );
+    }
   }
   console.log( location.state)
 
   function renderChatForm(creds) {
+    
 	console.log(creds);
     return (  
       <div className="hidden">

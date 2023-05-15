@@ -39,7 +39,7 @@ export default function User() {
   return (
     <div>
       <Navbar />
-      <div className="my-10 py-10 px-10 w-[500px] mx-auto flex flex-col justify-center gap-4 rounded-lg">
+      <div className="my-10 py-10 px-10 max-m:px-5 w-[70vw] max-w-[500px] min-w-[280px] mx-auto flex flex-col justify-center gap-4 rounded-lg">
         <img
           src="./images/user_avatar.png"
           alt=""

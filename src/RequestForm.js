@@ -146,7 +146,7 @@ export default function RequestForm() {
                 onChange={changeHandler}
               />
             </div>
-            <button className="max-lg:w-[40vw] px-5 py-2 rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200 text-white">
+            <button className="  px-5 py-2 rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200 text-white">
               Request
             </button>
           </form>
