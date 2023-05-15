@@ -1,34 +1,37 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Chat.css";
-import {Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ChatEngine, getOrCreateChat } from "react-chat-engine";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { AppContext } from "./Context/AppContext";
 const Chat = () => {
-  const location=useLocation();
+  const location = useLocation();
   const [username, setUsername] = useState(location?.state?.name);
-  const state = useContext(AppContext) ; 
-  const [user , setUser] = state.userApi.user;
-   
+  const state = useContext(AppContext);
+  const [user, setUser] = state.userApi.user;
 
-  useEffect(()=>{
-     console.log("checking from chat" , user);
-  },[user])
+  const [fullName, setFullName] = useState("");
+
+  useEffect(() => {
+    if (user) {
+      setFullName(user.firstName + " " + user.lastName);
+    }
+  }, [user]);
+
   function createDirectChat(creds) {
-    console.log("checking creds " , creds);
-    getOrCreateChat(
-      creds,
-      { is_direct_chat: true, usernames: [username] },
-      () => setUsername("")
-    );
+    if (location?.state?.name) {
+      getOrCreateChat(
+        creds,
+        { is_direct_chat: true, usernames: [username] },
+        () => setUsername("")
+      );
+    }
   }
-  console.log( location.state)
 
   function renderChatForm(creds) {
-	console.log(creds);
-    return (  
-      <div className="hidden">
+    return (
+      <div>
         <div>
           <input
             placeholder="Username"
