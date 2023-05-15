@@ -28,7 +28,7 @@ const Chat = () => {
   function renderChatForm(creds) {
 	console.log(creds);
     return (  
-      <div>
+      <div className="hidden">
         <div>
           <input
             placeholder="Username"

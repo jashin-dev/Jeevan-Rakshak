@@ -7,6 +7,8 @@ module.exports = {
     screens: {
       'lg': '1080px',
       'max-lg': { 'max': '1080px' },
+      'max-m':{'max':'800px'},
+      'full-site':{'max':'1300px'}
     },
     extend: {
       fontFamily: {

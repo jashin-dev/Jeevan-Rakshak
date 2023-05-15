@@ -1,13 +1,13 @@
 function AboutUs(){
   return(
     <div
-          className="flex max-lg:flex-col justify-center p-10 gap-12 py-16 mt-20 mb-10 mx-20 border-2 rounded-tr-3xl rounded-bl-3xl shadow-inner items-center"
+          className="flex max-lg:flex-col justify-center lg:p-10 p-8 gap-12  py-8 lg:py-16 mt-20 mb-10 lg:mx-20 mx-5 border-2 rounded-tr-3xl rounded-bl-3xl shadow-inner items-center"
           id="aboutus"
         >
           <img
             src="images/bg1.png"
             alt=""
-            className="rounded-3xl w-[25vw] h-[40vw] shadow-lg"
+            className="rounded-3xl lg:w-[25vw] w-[50vw] h-[40vw] min-h-[150px] min-w-[180px] shadow-lg"
           />
           <div className="max-w-[450px]">
             <div className="text-4xl max-lg:text-xl font-bold pb-4">About Us</div>
