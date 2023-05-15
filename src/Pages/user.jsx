@@ -156,7 +156,7 @@ export default function User() {
            
               <li key={index} className="flex flex-col">
                 <div className="font-bold">Date:</div>
-                {ele.createdAt}
+                {dateFormat(ele.createdAt, "mmmm dS, yyyy")}
               </li>
               <li key={index} className="flex flex-col">
                 <div className="font-bold">Status:</div>

@@ -13,7 +13,11 @@ export default function DonateCard({ request }) {
     const url = `https://www.google.com/maps?daddr=${temp}`;
     window.location = url;
   };
-
+  const name=request.user_id.firstName + " " + request.user_id.lastName;
+function goToChat(){
+  navigate('/chat',{state:{name: name}})
+  
+} 
   const handleDonateClick = async () => {
     try {
 
@@ -41,7 +45,7 @@ export default function DonateCard({ request }) {
           <td>{request.user_id.bloodGrp}</td>
           <td className='flex flex-row gap-5 p-4'>
             <button className='p-[10px] border-none rounded bg-[#f45454] text-white font-semibold hover:bg-[#e84343]' onClick={handleDonateClick}>Donate Blood</button>
-            <button className='p-[10px] border-none rounded bg-[#f45454] text-white font-semibold hover:bg-[#e84343]' onClick={()=>{navigate('/chat')}}>Chat</button>
+            <button className='p-[10px] border-none rounded bg-[#f45454] text-white font-semibold hover:bg-[#e84343]' onClick={goToChat}>Chat</button>
           </td>
 
 </tr>

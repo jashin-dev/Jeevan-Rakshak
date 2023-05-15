@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Chat.css";
-
+import {Link, useLocation } from "react-router-dom";
 import { ChatEngine, getOrCreateChat } from "react-chat-engine";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { AppContext } from "./Context/AppContext";
-
 const Chat = () => {
-  const [username, setUsername] = useState("");
+  const location=useLocation();
+  const [username, setUsername] = useState(location.state.name);
   const state = useContext(AppContext) ; 
   const [user , setUser] = state.userApi.user;
    
@@ -23,10 +23,11 @@ const Chat = () => {
       () => setUsername("")
     );
   }
+  console.log( location.state)
 
   function renderChatForm(creds) {
 	console.log(creds);
-    return (
+    return (  
       <div>
         <div>
           <input
@@ -34,7 +35,7 @@ const Chat = () => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-          <button onClick={() => createDirectChat(creds)}>Create</button>
+          <button onClick={createDirectChat(creds)}>Create</button>
         </div>
       </div>
     );
