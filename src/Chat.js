@@ -35,8 +35,6 @@ const Chat = () => {
 	console.log(creds);
     return (  
       <div className="hidden">
-    return (
-      <div>
         <div>
           <input
             placeholder="Username"
