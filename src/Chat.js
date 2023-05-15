@@ -5,6 +5,7 @@ import { ChatEngine, getOrCreateChat } from "react-chat-engine";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { AppContext } from "./Context/AppContext";
+import Loading from "./Components/Loading";
 const Chat = () => {
   const location = useLocation();
   const [username, setUsername] = useState(location?.state?.name);
@@ -46,20 +47,21 @@ const Chat = () => {
       </div>
     );
   }
-
-  return (
-    <div>
-      <Navbar />
-      <ChatEngine
-        height="100vh"
-        userName={user.firstName + " " + user.lastName}
-        userSecret="secret-123-jBj02"
-        projectID="75218d99-ca1d-44d9-90dc-7eaf8a5d512c"
-        renderNewChatForm={(creds) => renderChatForm(creds)}
-      />
-      <Footer />
-    </div>
-  );
+  
+  return user ? (<div>
+    <Navbar />
+    <ChatEngine
+      height="100vh"
+      userName={user.firstName + " " + user.lastName}
+      userSecret="secret-123-jBj02"
+      projectID="75218d99-ca1d-44d9-90dc-7eaf8a5d512c"
+      renderNewChatForm={(creds) => renderChatForm(creds)}
+    />
+    <Footer />
+  </div>) : <Loading/>
+    
+    
+  
 };
 
 export default Chat;

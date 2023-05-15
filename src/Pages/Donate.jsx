@@ -29,7 +29,7 @@ export default function Donate() {
         let userBloodGrp = user.bloodGrp ; 
         return (
           reqBloodGrp === userBloodGrp &&
-          request.user_id._id !== user._id
+          request.user_id._id !== user._id && request.status === "Pending"
         );
       });
     
