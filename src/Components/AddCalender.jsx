@@ -75,10 +75,10 @@ function Calendar() {
   console.log(eventDescription);
   return (
     <div >
-      <div className='flex flex-col gap-5 justify-center items-center leading-6' >
+      <div className='flex flex-col gap-5 justify-center items-center leading-6 w-full h-full p-10' >
         {session ?
           <>
-            <h2 className='font-bold text-2xl mt-5'>Hey there {session.user.email}</h2>
+            <h2 className='font-bold text-2xl m-5'>Hey there {session.user.email}</h2>
             <p>Start of your event</p>
             <DateTimePicker onChange={setStart} value={start} className="flex text-xl " />
             <p>End of your event</p>
@@ -90,7 +90,11 @@ function Calendar() {
             <hr />
             <button onClick={() => createCalendarEvent()}>Create Calendar Event</button>
             <p></p>
-            <button onClick={() => signOut()}>Sign Out</button>
+         
+            <button
+          onClick={() => signOut()}
+          className="max-lg:w-[40vw] px-5 py-2 text-white rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200 opacity-100"
+        >Sign Out</button>
           </>
           :
           <>

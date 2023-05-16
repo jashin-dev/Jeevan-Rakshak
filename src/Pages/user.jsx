@@ -133,7 +133,7 @@ export default function User() {
       <div className="pl-5 mb-20">
         <ul className="flex flex-row">
           {requests.map((ele, index) => (
-            <ul className="p-10 m-5 w-[300px] bg-white border rounded-md">
+            <ul className="p-10 m-5 w-[300px] bg-white border-2 rounded-md">
               <li>
                 <img
                   src="./images/user_avatar.png"
@@ -151,7 +151,7 @@ export default function User() {
               </li>
               {ele.status==="Assigned"?
               <li key={index} className="flex flex-col">
-                <div className="font-bold">Donor Name:{ele.donor_id.firstName + " " + ele.donor_id.lastName}</div>
+                <div className="font-bold">Donor Name:</div>{ele.donor_id.firstName + " " + ele.donor_id.lastName}
               </li>:<></>}
 
               <li key={index} className="flex flex-col">
@@ -166,7 +166,7 @@ export default function User() {
       <div className="pl-5 mb-20">
         <ul className="flex flex-row">
           {donates.map((ele, index) => (
-            <ul className="p-10 m-5 w-[300px] bg-white border rounded-md">
+            <ul className="p-10 m-5 w-[300px] bg-white border-2 rounded-md">
               <li>
                 <img
                   src="./images/user_avatar.png"
@@ -185,7 +185,7 @@ export default function User() {
               </li>
               {ele.status==="Assigned"?
               <li key={index} className="flex flex-col">
-                <div className="font-bold">Request Name:{ele.user_id.firstName + " " + ele.user_id.lastName}</div>
+                  <div className="font-bold">Recepient Name:</div>{ele.user_id.firstName + " " + ele.user_id.lastName}
               </li>:<></>}
 
               <li key={index} className="flex flex-col">
