@@ -21,7 +21,7 @@ export default function Donate() {
   
   const getRequest = async () => {
     try {
-      const res = await axios.get("/request/getAllRequest");
+      const res = await axios.get("https://jeevan-rakshak-backend.onrender.com/request/getAllRequest");
       
 
       const requiredArray = res.data.filter((request) => {

@@ -7,7 +7,7 @@ const UserApi = (token) => {
 
   const getUser = async () => {
     try {
-      const res = await axios.get("/user/info", {
+      const res = await axios.get("https://jeevan-rakshak-backend.onrender.com/user/info", {
         headers: {
           Authorization: token,
         },
@@ -20,7 +20,7 @@ const UserApi = (token) => {
   };
   const getHistory = async () => {
     try {
-      const res = await axios.get("/user/history", {
+      const res = await axios.get("https://jeevan-rakshak-backend.onrender.com/user/history", {
         headers: {
           Authorization: token,
         },

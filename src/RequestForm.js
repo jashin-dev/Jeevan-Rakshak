@@ -32,7 +32,7 @@ export default function RequestForm() {
   }, [user]);
   const postRequest = async () => {
     try {
-      await axios.post("request/addRequest", formData, {
+      await axios.post("https://jeevan-rakshak-backend.onrender.com/request/addRequest", formData, {
         headers: {
           Authorization: token,
         },

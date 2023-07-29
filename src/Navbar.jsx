@@ -12,7 +12,7 @@ function Navbar() {
 
   const logoutRouteHandler = async () => {
     try {
-      await axios.get("/user/logout");
+      await axios.get("https://jeevan-rakshak-backend.onrender.com/user/logout");
       setToken(null);
       setIsLogged(false);
       localStorage.removeItem("firstLogin");

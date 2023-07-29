@@ -12,7 +12,7 @@ export default function Login() {
     const [formData, setFormData] = useState({ email: "", password: "" });
     const login = async()=>{
         try {
-            const res = await axios.post('/user/login' , formData ) ; 
+            const res = await axios.post('https://jeevan-rakshak-backend.onrender.com/user/login' , formData ) ; 
             const accessToken = res.data.accessToken ; 
             setToken(accessToken) ; 
             setIsLogged(true) ; 

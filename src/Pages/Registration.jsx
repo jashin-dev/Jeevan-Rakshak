@@ -20,7 +20,7 @@ export default function Registration() {
 
   const register = async () => {
     try {
-      const res = await axios.post("/user/register", formData);
+      const res = await axios.post("https://jeevan-rakshak-backend.onrender.com/user/register", formData);
 
 
       var data = {
@@ -34,7 +34,7 @@ export default function Registration() {
 
       await axios.post('https://api.chatengine.io/users/' , data , {
         headers : { 
-          'PRIVATE-KEY': '{d15833e0-d68b-4d51-babd-ff8a1f2502b0}'
+          'PRIVATE-KEY': '{f1413712-4d50-4103-b2fa-bfa47101f075}'
         }
       })
       navigate("/login");

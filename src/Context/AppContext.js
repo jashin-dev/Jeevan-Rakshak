@@ -11,7 +11,7 @@ export default function AppContextProvider({ children }) {
 
   const refreshToken = async () => {
     try {
-      const res = await axios.get("/user/refreshToken");
+      const res = await axios.get("https://jeevan-rakshak-backend.onrender.com/user/refreshToken");
       setToken(res.data.accessToken);
       setIsLogged(true) ; 
 

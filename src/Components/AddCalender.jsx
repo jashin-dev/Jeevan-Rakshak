@@ -79,18 +79,22 @@ function Calendar() {
         {session ?
           <>
             <h2 className='font-bold text-2xl m-5'>Hey there {session.user.email}</h2>
-            <p>Start of your event</p>
+            <p className=' font-bold text-2xl'>Start of your event</p>
             <DateTimePicker onChange={setStart} value={start} className="flex text-xl " />
-            <p>End of your event</p>
+            <p className=' font-bold text-2xl'>End of your event</p>
             <DateTimePicker onChange={setEnd} value={end} />
-            <p>Event name</p>
-            <input type="text" onChange={(e) => setEventName(e.target.value)} />
-            <p>Event description</p>
-            <input type="text" onChange={(e) => setEventDescription(e.target.value)} />
+            <p className=' font-bold text-2xl'>Event name</p>
+            <input type="text" onChange={(e) => setEventName(e.target.value)} className='border-2 border-black rounded-md p-1'/>
+            <p className=' font-bold text-2xl'>Event description</p>
+            <input type="text" onChange={(e) => setEventDescription(e.target.value)} className='border-2 border-black rounded-md p-1' />
             <hr />
-            <button onClick={() => createCalendarEvent()}>Create Calendar Event</button>
-            <p></p>
+            
          
+            <button
+          onClick={() => createCalendarEvent()}
+          className="max-lg:w-[40vw] px-5 py-2 text-white rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200 opacity-100"
+        >Create Calendar Event</button>
+        <p></p>
             <button
           onClick={() => signOut()}
           className="max-lg:w-[40vw] px-5 py-2 text-white rounded-md bg-[#f45454] hover:scale-105 transition-all duration-200 opacity-100"
