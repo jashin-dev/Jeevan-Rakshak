@@ -4,7 +4,7 @@ function Footer() {
       <ul className="text-white text-xl p-10 m-5 flex  w-full justify-around">
         <ul className="w-[20%] max-m:hidden">
           <li >About Website:</li>
-        <li className=" text-[18px] ">Developed as a minor project for 7th semester.</li>
+        <li className=" text-[18px] ">Developed as a major project for 8th semester.</li>
         </ul>
         <ul className="max-m:hidden">
           <li>Developed By:</li>
