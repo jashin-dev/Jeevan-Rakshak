@@ -11,8 +11,9 @@ function Footer() {
           <ul className=" text-lg">
 {/*             <li><a href="https:www.github.com/amang8775">Aman Gupta</a></li>
             <li><a href="https:www.github.com/aniketj2002">Aniket Jindal</a></li> */}
-              <li>Jashin Bhatia</li>
+              <li>Shubham Sharma</li>
             <li>Navpreet Kaur</li>
+            <li>Mayank</li>
           </ul>
         </ul>
 
