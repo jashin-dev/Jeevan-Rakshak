@@ -54,7 +54,7 @@ const Chat = () => {
       height="100vh"
       userName={user.firstName + " " + user.lastName}
       userSecret="secret-123-jBj02"
-      projectID="9b084510-9c12-483a-a13d-dbbe55f6db5c"
+      projectID="e7cf3c0b-bdc0-4bee-b366-5ffc6dcf41b4"
       renderNewChatForm={(creds) => renderChatForm(creds)}
     />
     <Footer />
