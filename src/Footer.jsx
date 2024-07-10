@@ -11,9 +11,7 @@ function Footer() {
           <ul className=" text-lg">
 {/*             <li><a href="https:www.github.com/amang8775">Aman Gupta</a></li>
             <li><a href="https:www.github.com/aniketj2002">Aniket Jindal</a></li> */}
-              <li>Jashin Bhatia</li>
-{/*             <li>Navpreet Kaur</li>
-            <li>Mayank</li> */}
+              <li>Jashin Bhatia</li> 
           </ul>
         </ul>
 
@@ -21,7 +19,7 @@ function Footer() {
           <li className="text-left">Contact Us</li>
           <ul className=" text-lg">
             <li></li>
-            <li>Phone: +919876543210</li>
+            <li>Phone: +918595978106</li>
             <li>Email: <a href="mailto:jeevanrakshak@gamil.com">jeevanrakshak@gamil.com</a></li>
           </ul>
         </ul>
